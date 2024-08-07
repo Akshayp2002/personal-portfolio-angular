@@ -1,0 +1,37 @@
+<nav class="w-full z-20 top-0 start-0 h-20 mb-6">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <h2 class="font-bold font-playwrite text-sky-800 text-[25px] lg:text-[20px]">Akshay
+        </h2>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+            <button data-collapse-toggle="navbar-sticky" class="md:hidden" aria-controls="navbar-sticky"
+                aria-expanded="false">
+                <img class="w-14 lg:w-16" src="/assets2/menu.svg" alt="">
+            </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 z-20 p-5"
+            id="navbar-sticky">
+            <ul
+                class="flex flex-col p-3 md:p-0 mt-4 font-medium rounded-[30px] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  border border-1 border-gray-300 bg-transparent backdrop-filter backdrop-blur-sm">
+                <a routerLink="/projects" routerLinkActive="active">
+                    <li
+                        class="bg-white rounded w-full lg:rounded-full text-black text-center px-8 p-2 m-1 hover:bg-white items-center">
+                        Home
+                    </li>
+                </a>
+                <a routerLink="/projects" routerLinkActive="active">
+                    <li
+                        class="rounded w-full lg:rounded-full text-black text-center px-8 p-2 m-1 hover:bg-white items-center">
+                        About
+                    </li>
+                </a>
+                <a routerLink="/projects" routerLinkActive="active">
+                    <li
+                        class="rounded w-full lg:rounded-full text-black text-center px-8 p-2 m-1 hover:bg-white items-center">
+                        Projects
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>
