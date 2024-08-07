@@ -1,0 +1,12 @@
+/* In your global CSS file or inside a <style> tag */
+.polka {
+    background-image: radial-gradient(#59637281 1.2px, #f7f2f2 1.2px);
+    background-size: 45px 45px;
+}
+
+/* Dark mode styles */
+.dark .polka {
+    background-image: radial-gradient(#9e9797 1.2px, #1a1a1a 1.2px);
+    /* Example dark mode gradient */
+    background-size: 45px 45px;
+}

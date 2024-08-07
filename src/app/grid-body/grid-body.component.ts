@@ -55,8 +55,8 @@ export class GridBodyComponent implements OnInit {
 
 
     this.project1 = windowWidth >= 1024 ? 'row-span-2' :
-      windowWidth >= 768 ? 'col-span-1' :
-        'col-span-2';
+      windowWidth >= 768 ? 'col-span-1 row-span-2' :
+        'col-span-2 row-span-2';
 
   }
 

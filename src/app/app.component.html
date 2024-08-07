@@ -1,4 +1,10 @@
-<router-outlet></router-outlet>
+<div [ngClass]="darkModeService.darkModeSignel()">
+<div class="bg-[#f7f2f2] polka dark:bg-black" >
+
+  <router-outlet></router-outlet>
+</div>
+
+</div>
 <!-- <mat-grid-list cols="4" rowHeight="100px">
   @for (tile of tiles; track tile) {
 

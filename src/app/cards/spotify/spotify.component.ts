@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DarkModeService } from './../../services/dark-mode.service';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-spotify',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class SpotifyComponent {
 
+  darkModeService:DarkModeService = inject(DarkModeService);
+
+  toggleDarkMode(){
+    this.darkModeService.updateDarkMode();
+  }
 }
