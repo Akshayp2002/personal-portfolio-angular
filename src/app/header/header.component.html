@@ -9,26 +9,28 @@
                 <img class="w-14 lg:w-16" src="/assets2/menu.svg" alt="">
             </button>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 z-20 p-5"
-            id="navbar-sticky">
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 z-20 p-4" id="navbar-sticky">
             <ul
-                class="flex flex-col p-3 md:p-0 mt-4 font-medium rounded-[30px] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  border border-1 border-gray-300 bg-transparent backdrop-filter backdrop-blur-sm">
-                <a routerLink="/home" routerLinkActive="bg-white dark:bg-gray-800 lg:rounded-full m-1">
-                    <li
-                        class="lg:rounded-full text-black dark:text-white text-center px-8 p-2 m-1 hover:bg-white items-center hover:text-black">
+                class="flex flex-col md:p-1 mt-2 font-medium rounded-[30px] md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 border-2 border-gray-300 dark:border-gray-700 bg-transparent backdrop-filter backdrop-blur-sm p-2">
+                <a routerLink="/home" routerLinkActive="bg-white dark:bg-gray-800 lg:rounded-full">
+                    <li class="lg:rounded-full text-black dark:text-white text-center px-4 py-1 m-1 
+                                hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white 
+                                transition duration-300 ease-in-out">
                         Home
                     </li>
                 </a>
-                <a routerLink="/about" routerLinkActive="bg-white dark:bg-gray-800 lg:rounded-full m-1">
-                    <li
-                        class="lg:rounded-full text-black dark:text-white text-center px-8 p-2 m-1 hover:bg-white items-center">
+                <a routerLink="/about" routerLinkActive="bg-white dark:bg-gray-800 lg:rounded-full">
+                    <li class="lg:rounded-full text-black dark:text-white text-center px-4 py-1 m-1 
+                                hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white 
+                                transition duration-300 ease-in-out">
                         About
                     </li>
                 </a>
-                <a routerLink="/projects" routerLinkActive="bg-white dark:bg-gray-800 lg:rounded-full m-1">
-                    <li
-                        class="lg:rounded-full text-black dark:text-white text-center px-8 p-2 m-1 hover:bg-white items-center">
-                        Projects
+                <a routerLink="/tools" routerLinkActive="bg-white dark:bg-gray-800 lg:rounded-full">
+                    <li class="lg:rounded-full text-black dark:text-white text-center px-4 py-1 m-1 
+                                hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white 
+                                transition duration-300 ease-in-out">
+                        Tools
                     </li>
                 </a>
             </ul>

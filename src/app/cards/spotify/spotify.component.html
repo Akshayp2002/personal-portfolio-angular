@@ -2,10 +2,9 @@
     class="bg-white rounded-[30px] p-6 md:p-10 flex flex-col justify-center hover:shadow-lg h-[280px] dark:bg-gray-800 dark:text-white items-center">
     <label for="theme" class="theme" (click)="toggleDarkMode()">
         <span class="theme__toggle-wrap">
-            <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme"
+            <input id="theme" class="theme__toggle" type="radio" role="switch" name="theme"
                 [checked]="darkModeService.darkModeSignel() === 'dark'">
-            <span class="theme__fill">
-                <!-- Light Mode Icon -->
+            <!-- <span class="theme__fill">
                 @if(darkModeService.darkModeSignel() !== 'dark'){
                 <svg class="theme__icon-part" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -15,7 +14,6 @@
                         d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M16.97 16.97l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M16.97 7.03l1.42-1.42" />
                 </svg>
                 }
-                <!-- Dark Mode Icon -->
                 @if(darkModeService.darkModeSignel() == 'dark'){
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50">
                     <path
@@ -23,7 +21,9 @@
                     </path>
                 </svg>
                 }
-            </span>
+            </span> -->
         </span>
     </label>
 </div>
+
+
