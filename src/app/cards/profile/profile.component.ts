@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-profile',
@@ -10,6 +11,19 @@ import { CommonModule } from '@angular/common';
 })
 export class ProfileComponent implements OnInit {
   gridCols: string | undefined;
+
+  celebrate() {
+    const duration = 3000; // in milliseconds
+
+    confetti({
+      particleCount: 100,
+      spread: 160,
+      origin: { y: 0.6 },
+    });
+
+    // Clear confetti after a certain duration
+    setTimeout(() => confetti.reset(), duration);
+  }
 
   ngOnInit(): void {
     this.updateGridCols(window.innerWidth);

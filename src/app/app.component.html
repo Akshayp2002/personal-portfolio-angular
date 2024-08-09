@@ -1,8 +1,8 @@
 <div [ngClass]="darkModeService.darkModeSignel()">
   <div class="bg-[#f7f2f2] polka dark:bg-black">
-    <app-header/>
+    <app-header />
     <router-outlet></router-outlet>
-    <p class="text-center text-gray-500 text-sm">
+    <p (click)="confettiService.clickPopper()" class="text-center text-gray-500 text-sm">
       Made with Angular and Tailwind
       <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-red-500" viewBox="0 0 24 24"
         fill="currentColor">

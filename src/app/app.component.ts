@@ -4,6 +4,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { HeaderComponent } from "./header/header.component";
+import { ConfettiService } from './services/confetti.service';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { HeaderComponent } from "./header/header.component";
 })
 
 export class AppComponent implements OnInit{
+  constructor(public confettiService: ConfettiService) { }
   ngOnInit(): void {
     initFlowbite();
   }

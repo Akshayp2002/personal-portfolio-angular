@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfettiService } from '../../services/confetti.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './contact-me.component.css'
 })
 export class ContactMeComponent {
-
+  constructor(public confettiService: ConfettiService) { }
 }
