@@ -1,0 +1,86 @@
+<div class="container mx-auto grid grid-cols-2  lg:grid-cols-4 gap-4 p-4 px-10 xl:px-32 pb-20 content">
+    <div
+        class="bg-white row-span-2 md:row-span-1 col-span-4 dark:bg-gray-800 rounded-[30px] p-6 sm:p-10 flex flex-col gap-4 md:h-[280px] hover:shadow-lg dark:hover:shadow-xl hover-trigger">
+        <div class="relative w-20 h-20 lg:w-24 lg:h-24 image-container">
+            <!-- Default Image -->
+            <img class="default-image w-full h-full object-cover" src="assets/img/Me.png" alt="default image">
+            <!-- Hover Image -->
+            <img class="hover-image w-full h-full object-cover" src="assets/img/mepopper.png" alt="hover image">
+        </div>
+        <div class="relative inline-block">
+            <p class="font-medium text-gray-500 dark:text-gray-300">
+                {{ aboutme }}
+            </p>
+        </div>
+    </div>
+
+    <div
+        class="bg-white col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-800 rounded-[30px] p-6  flex flex-col gap-4 h-[560px] hover:shadow-lg dark:hover:shadow-xl hover-trigger">
+        <div class="relative inline-block">
+            <span class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block">
+                Work Experience </span>
+            <!-- Work Experience -->
+            @for (item of work; track $index) {
+            <!-- Position -->
+            <p class="text-md md:text-xl roboto-mono-500  text-sky-800 dark:text-white mt-6">
+                {{item.position}}
+            </p>
+            <div class="flex justify-between flex-grow">
+                <!-- Company -->
+                <p class="text-md md:text-xl roboto-mono-500 text-gray-800 dark:text-white break-keep">
+                    {{item.company}}
+                </p>
+                <!-- Time period -->
+                <p class="text-xs md:text-md font-medium text-gray-500 dark:text-gray-300">{{item.time_period}}</p>
+            </div>
+            <!-- Positioo -->
+            <p class="font-medium text-gray-500 dark:text-gray-300">{{item.place}}</p>
+            <!-- Projects -->
+            <div class="flex flex-wrap mt-2">
+                <!-- Projects -->
+                <span class="text-sm md:text-md font-medium text-sky-500 dark:text-gray-300 md:mb-3 break-keep">Projects : </span>
+                @for (tech of item.projects; track $index) {
+                <!-- project Names -->
+                <a [href]="tech.link" target="_blank">
+                    <span class="text-xs md:text-md m-1 text-sky-800 cursor-pointer whitespace-nowrap">{{tech.name}},</span></a>
+                }
+            </div>
+            <!-- Tech and Tools -->
+            <div class="flex flex-wrap mt-2">
+                <span class="font-medium text-gray-500 dark:text-gray-300 md:mb-3 break-keep">Tech and Tools :</span>
+                @for (tech of item.tech; track $index) {
+                <!-- tech i used -->
+                <a [href]="tech.link" target="_blank">
+                    <span class="text-sm md:text-md m-1 text-yellow-400 cursor-pointer ">#{{tech.name}}</span></a>
+                }
+            </div>
+            }
+        </div>
+    </div>
+
+    <div
+        class="bg-white col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-800 rounded-[30px] p-6 sm:p-10 flex flex-col gap-4 h-[560px] hover:shadow-lg dark:hover:shadow-xl hover-trigger">
+        <div class="relative inline-block">
+            <!-- Education -->
+            <span class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block">
+                Education </span>
+            @for (item of education; track $index) {
+            <!-- qualified -->
+            <p class="text-md md:text-xl roboto-mono-500  text-sky-800 dark:text-white mt-6">
+                {{item.qualified}}
+            </p>
+            <div class="flex flex-grow justify-between">
+                <!-- studied at -->
+                <p class="text-md md:text-xl roboto-mono-500 text-gray-800 dark:text-white break-keep">
+                    {{item.studied_at}}
+                </p>
+                <!-- Time period -->
+                <p class="text-xs md:text-md font-medium text-gray-500 dark:text-gray-300">{{item.time_period}}</p>
+            </div>
+            <!-- Place -->
+            <p class="font-medium text-gray-500 dark:text-gray-300">{{item.place}}</p>
+
+            }
+        </div>
+    </div>
+</div>
