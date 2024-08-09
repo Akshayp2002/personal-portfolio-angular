@@ -40,6 +40,12 @@ export class TechToolsComponent {
       image: 'assets/img/bootstrap.svg'
     },
     {
+      name: "Flowbite",
+      description: 'Flowbite is a popular UI component library designed for Tailwind CSS, providing a set of accessible and customizable components for building modern web applications.',
+      link: 'https://flowbite.com/',
+      image: 'assets/img/flowbite.svg'
+    },
+    {
       name: "HTML5",
       description: 'HTML5 is the latest version of HyperText Markup Language, the standard for creating web pages and applications.',
       link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',

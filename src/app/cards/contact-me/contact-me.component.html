@@ -1,19 +1,26 @@
 <div
-    class="button bg-white  dark:bg-gray-800 col-span-2 rounded-[30px] relative h-[280px] hover:shadow-lg p-4 px-12 pb-20 overflow-hidden ">
+    class="button bg-white  dark:bg-gray-800 col-span-2 rounded-[30px] relative h-[280px] hover:shadow-lg p-4 md:px-12 pb-20 overflow-hidden ">
     <div class="bg-[#98d0ff] rounded-bl-full w-48 h-44 absolute top-0 right-0 flex items-center justify-center">
     </div>
     <button (click)="confettiService.celebrate()">
-        <img class="w-16 lg:w-16 relative" src="assets/Party popper.svg" alt="">
+        <img class="w-16 lg:w-16 relative" src="assets/img/Party popper.svg" alt="">
     </button>
-    <h2 class="font-bold font-raleway text-[25px] lg:text-[30px] relative typing-demo dark:text-white">Get In Touch</h2>
-    <p class="font-medium text-gray-500 relative">sr.dev.akshay&#64;gmail.com</p>
+    <h2 class="font-bold font-raleway text-[25px] lg:text-[30px] relative typing-demo dark:text-white">Get In Touch :
+    </h2>
+    <p class="font-medium text-gray-500 flex items-center relative dark:text-white mt-4">
+        <span class="mr-2">Contact:</span>
+        <span>sr.dev.akshay&#64;gmail.com</span>
+        <button [cdkCopyToClipboard]="value" class="ml-2" (click)="confettiService.celebrate()">
+            <img src="assets/img/copyclip.svg" alt="Copy icon" class="w-5 h-5">
+        </button>
+    </p>
     <div class="h-44 flex justify-start">
         <form action="mailto:sr.dev.akshay@gmail.com" method="post" enctype="text/plain" class="form" data-form
             target="_blank">
             <button type="submit"
-                class="group bg-white dark:bg-gray-800 w-10 h-10 hover:w-32 rounded-full absolute bottom-0 left-0 m-4 flex justify-center border items-center hover:ring-4 ring-gray-200">
-                <p class="hidden group-hover:block dark:text-white">Contact me</p>
-                <img class="w-5 lg:w-5" src="assets/arrow.svg" alt="">
+                class="group bg-white dark:bg-gray-700 w-10 h-10 hover:w-32 rounded-full absolute bottom-0 left-0 m-4 flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400">
+                <p class="hidden group-hover:block dark:text-white">Contact Me</p>
+                <img class="w-5 lg:w-5" src="assets/img/arrow.svg" alt="">
             </button>
         </form>
     </div>

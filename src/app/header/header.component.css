@@ -9,3 +9,23 @@
     font-family: 'Raleway', sans-serif;
 
 }
+
+/* Define the keyframes for the click effect */
+@keyframes click-effect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Add the animation class */
+.click-animation:active {
+    animation: click-effect 0.2s ease;
+}
