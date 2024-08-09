@@ -8,7 +8,7 @@ import confetti from 'canvas-confetti';
 export class ConfettiService {
 
   celebrate() {
-    var end = Date.now() + (15 * 1000);
+    var end = Date.now() + (3 * 1000);
 
     // go Buckeyes!
     var colors = ['#00ff44', '#eeff00', '#ff0008'];
