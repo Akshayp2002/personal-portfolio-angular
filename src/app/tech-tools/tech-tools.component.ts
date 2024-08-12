@@ -171,6 +171,12 @@ export class TechToolsComponent {
       link: 'https://www.typescriptlang.org/',
       image: 'assets/img/typescript.svg'
     },
+    {
+      name: "Swiper",
+      description: 'Swiper is the most modern free and open source mobile touch slider with hardware accelerated transitions and amazing native behavior.',
+      link: 'https://swiperjs.com/',
+      image: 'assets/img/swipper.svg'
+    },
 
   ];
 }
