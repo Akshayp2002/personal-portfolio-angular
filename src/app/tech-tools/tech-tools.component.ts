@@ -28,6 +28,12 @@ export class TechToolsComponent {
       image: 'assets/img/angular17.svg'
     },
     {
+      name: "Splade",
+      description: 'Splade provides a super easy way to build Single Page Applications (SPA) using standard Laravel Blade templates, enhanced with renderless Vue 3 components. ',
+      link: 'https://splade.dev/',
+      image: 'assets/img/splade.svg'
+    },
+    {
       name: "Tailwind CSS",
       description: 'Tailwind CSS is a utility-first CSS framework for creating custom designs without having to leave your HTML.',
       link: 'https://tailwindcss.com/',
@@ -88,6 +94,12 @@ export class TechToolsComponent {
       image: 'assets/img/bitbucket.svg'
     },
     {
+      name: "Figma",
+      description: 'Figma is a powerful, collaborative design tool for teams. Explore ideas and gather feedback, build realistic prototypes, and streamline product development with design systems.',
+      link: 'https://www.figma.com',
+      image: 'assets/img/figma.svg'
+    },
+    {
       name: "Jira",
       description: 'Jira is a tool developed by Atlassian used for issue tracking and project management.',
       link: 'https://www.atlassian.com/software/jira',
@@ -146,6 +158,12 @@ export class TechToolsComponent {
       description: 'Spatie is a web development company that provides a wide range of open-source packages for Laravel and other PHP projects.',
       link: 'https://spatie.be/',
       image: 'assets/img/spatie.svg'
+    }, 
+    {
+      name: "Vercel",
+      description: 'Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web',
+      link: 'https://vercel.com',
+      image: 'assets/img/vercel-icon-dark.svg'
     },
     {
       name: "TypeScript",

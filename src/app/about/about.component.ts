@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AboutComponent {
 
   aboutme: string = `I’m an enthusiastic Laravel developer with experience, 
-                      keen to leverage my robust knowledge in Laraveland related technologies 
+                      keen to leverage my robust knowledge in Laravel and related technologies 
                       to significantly contribute to the company’s success while continuously 
                       expanding my expertise.I enjoy creating solutions from scratch, exploring 
                       how things work, and am driven by curiosity to solve complex challenges.`;
