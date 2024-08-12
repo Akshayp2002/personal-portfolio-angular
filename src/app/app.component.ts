@@ -4,18 +4,18 @@ import { Component, Renderer2, ElementRef, inject, OnInit } from '@angular/core'
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { HeaderComponent } from "./header/header.component";
-import { ConfettiService } from './services/confetti.service';
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HeaderComponent],
+  imports: [RouterOutlet, CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 
 export class AppComponent implements OnInit {
-  constructor(private renderer: Renderer2, private el: ElementRef, public confettiService: ConfettiService) { }
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
   ngOnInit(): void {
     initFlowbite();
 
