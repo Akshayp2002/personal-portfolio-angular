@@ -5,6 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ export class AppComponent implements OnInit {
   constructor(private renderer: Renderer2, private el: ElementRef) { }
   ngOnInit(): void {
     initFlowbite();
-
+    injectSpeedInsights();
+    
     this.renderer.setStyle(this.el.nativeElement, 'user-select', 'none');
     this.renderer.setStyle(this.el.nativeElement, '-webkit-user-select', 'none');
     this.renderer.setStyle(this.el.nativeElement, '-moz-user-select', 'none');
