@@ -70,16 +70,22 @@ export class TechToolsComponent {
       image: 'assets/img/js.svg'
     },
     {
-      name: "MySQL",
-      description: 'MySQL is an open-source relational database management system based on SQL (Structured Query Language).',
-      link: 'https://www.mysql.com/',
-      image: 'assets/img/mysql.svg'
+      name: "jQuery",
+      description: 'jQuery is a fast, small, and feature-rich JavaScript library that simplifies things like HTML document traversal and manipulation.',
+      link: 'https://jquery.com/',
+      image: 'assets/img/jquery.svg'
     },
     {
       name: "Vite",
       description: 'Vite is a modern build tool that provides a fast development environment and optimized builds.',
       link: 'https://vitejs.dev/',
       image: 'assets/img/vitejs.svg'
+    },
+    {
+      name: "MySQL",
+      description: 'MySQL is an open-source relational database management system based on SQL (Structured Query Language).',
+      link: 'https://www.mysql.com/',
+      image: 'assets/img/mysql.svg'
     },
     {
       name: "GitHub",
@@ -94,16 +100,16 @@ export class TechToolsComponent {
       image: 'assets/img/bitbucket.svg'
     },
     {
-      name: "Figma",
-      description: 'Figma is a powerful, collaborative design tool for teams. Explore ideas and gather feedback, build realistic prototypes, and streamline product development with design systems.',
-      link: 'https://www.figma.com',
-      image: 'assets/img/figma.svg'
-    },
-    {
       name: "Jira",
       description: 'Jira is a tool developed by Atlassian used for issue tracking and project management.',
       link: 'https://www.atlassian.com/software/jira',
       image: 'assets/img/jira.svg'
+    },
+    {
+      name: "Figma",
+      description: 'Figma is a powerful, collaborative design tool for teams. Explore ideas and gather feedback, build realistic prototypes, and streamline product development with design systems.',
+      link: 'https://www.figma.com',
+      image: 'assets/img/figma.svg'
     },
     {
       name: "Postman",
@@ -134,12 +140,6 @@ export class TechToolsComponent {
       description: 'Visual Studio Code is a source-code editor developed by Microsoft with support for debugging, syntax highlighting, and version control.',
       link: 'https://code.visualstudio.com/',
       image: 'assets/img/vscode.svg'
-    },
-    {
-      name: "jQuery",
-      description: 'jQuery is a fast, small, and feature-rich JavaScript library that simplifies things like HTML document traversal and manipulation.',
-      link: 'https://jquery.com/',
-      image: 'assets/img/jquery.svg'
     },
     {
       name: "OpenAI",
