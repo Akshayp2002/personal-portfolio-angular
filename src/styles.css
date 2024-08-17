@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    cursor: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2035%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M7.90102%2039.6649L0%200L34.7645%2019.8324L17.3822%2024.4091L7.90102%2039.6649Z%22%20fill%3D%22%2318A0FB%22/%3E%3C/svg%3E') 7 7, auto;
+}
+
+a,
+button,
+.pointer-cursor {
+    cursor: url("data:image/svg+xml,%3Csvg width='30' height='32' viewBox='0 0 30 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_107_18)'%3E%3Cpath d='M15.5 25.131L13 12.131L24 18.631L18.5 20.131L15.5 25.131Z' fill='%2318A0FB'/%3E%3Cpath d='M13.2544 11.7006L12.2996 11.1364L12.509 12.2255L15.009 25.2255L15.2559 26.5096L15.9287 25.3883L18.8254 20.5606L24.1316 19.1134L25.2726 18.8022L24.2544 18.2006L13.2544 11.7006Z' stroke='%2318A0FB' stroke-linecap='square'/%3E%3C/g%3E%3Cline x1='0.938404' y1='11.5038' x2='7.9384' y2='10.6348' stroke='%2318A0FB'/%3E%3Cline x1='19.3779' y1='1.32745' x2='14.3779' y2='7.09717' stroke='%2318A0FB'/%3E%3Cpath d='M6.73822 0.581758L8.20735 4.03547L9.67647 7.48918' stroke='%2318A0FB'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_107_18' x='8.59911' y='8.1417' width='20.946' height='23.7465' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='1'/%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_107_18'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_107_18' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") 7 7, auto !important;
+}
+
+/* Custom cursor for input elements */
+input,
+textarea,
+select {
+    cursor: url("data:image/svg+xml,%3Csvg width='30' height='32' viewBox='0 0 30 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_107_18)'%3E%3Cpath d='M15.5 25.131L13 12.131L24 18.631L18.5 20.131L15.5 25.131Z' fill='%2318A0FB'/%3E%3Cpath d='M13.2544 11.7006L12.2996 11.1364L12.509 12.2255L15.009 25.2255L15.2559 26.5096L15.9287 25.3883L18.8254 20.5606L24.1316 19.1134L25.2726 18.8022L24.2544 18.2006L13.2544 11.7006Z' stroke='%2318A0FB' stroke-linecap='square'/%3E%3C/g%3E%3Cline x1='0.938404' y1='11.5038' x2='7.9384' y2='10.6348' stroke='%2318A0FB'/%3E%3Cline x1='19.3779' y1='1.32745' x2='14.3779' y2='7.09717' stroke='%2318A0FB'/%3E%3Cpath d='M6.73822 0.581758L8.20735 4.03547L9.67647 7.48918' stroke='%2318A0FB'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_107_18' x='8.59911' y='8.1417' width='20.946' height='23.7465' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='1'/%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_107_18'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_107_18' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") 7 7, auto !important;
+}
+
+/* Custom cursor for toggle-active state */
+body.toggle-active input,
+body.toggle-active textarea,
+body.toggle-active select {
+    cursor: url("data:image/svg+xml,%3Csvg width='30' height='32' viewBox='0 0 30 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_107_18)'%3E%3Cpath d='M15.5 25.131L13 12.131L24 18.631L18.5 20.131L15.5 25.131Z' fill='%2318A0FB'/%3E%3Cpath d='M13.2544 11.7006L12.2996 11.1364L12.509 12.2255L15.009 25.2255L15.2559 26.5096L15.9287 25.3883L18.8254 20.5606L24.1316 19.1134L25.2726 18.8022L24.2544 18.2006L13.2544 11.7006Z' stroke='%2318A0FB' stroke-linecap='square'/%3E%3C/g%3E%3Cline x1='0.938404' y1='11.5038' x2='7.9384' y2='10.6348' stroke='%2318A0FB'/%3E%3Cline x1='19.3779' y1='1.32745' x2='14.3779' y2='7.09717' stroke='%2318A0FB'/%3E%3Cpath d='M6.73822 0.581758L8.20735 4.03547L9.67647 7.48918' stroke='%2318A0FB'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_107_18' x='8.59911' y='8.1417' width='20.946' height='23.7465' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='1'/%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_107_18'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_107_18' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") 7 7, auto !important;
+}

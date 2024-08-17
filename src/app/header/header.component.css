@@ -9,7 +9,10 @@
     font-family: 'Raleway', sans-serif;
 
 }
-
+.pacifico-regular {
+    font-family: "Pacifico";
+    font-weight: 600;
+}
 /* Define the keyframes for the click effect */
 @keyframes click-effect {
     0% {
