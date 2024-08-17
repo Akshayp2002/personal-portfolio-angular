@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SpotifyComponent } from './spotify.component';
+import { DarkmodeComponent } from './darkmode.component';
 
-describe('SpotifyComponent', () => {
-  let component: SpotifyComponent;
-  let fixture: ComponentFixture<SpotifyComponent>;
+describe('DarkmodeComponent', () => {
+  let component: DarkmodeComponent;
+  let fixture: ComponentFixture<DarkmodeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SpotifyComponent]
+      imports: [DarkmodeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SpotifyComponent);
+    fixture = TestBed.createComponent(DarkmodeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

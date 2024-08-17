@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './tech-tools.component.css'
 })
 export class TechToolsComponent {
+
+  tools: string = `I actively use a diverse set of cutting-edge technologies and tools in my daily work. From
+                modern frameworks and
+                languages to powerful platforms, my toolkit ensures high-quality and efficient development. 🚀 🌟`
   items: Array<any> = [
     {
       name: "Laravel",

@@ -8,14 +8,14 @@
             <img class="hover-image w-full h-full object-cover" src="assets/img/mepopper.png" alt="hover image">
         </div>
         <div class="relative inline-block">
-            <p class="font-medium text-gray-500 dark:text-gray-300">
+            <p class="font-medium text-gray-500 dark:text-gray-300 text-md">
                 {{ aboutme }}
             </p>
         </div>
     </div>
 
     <div
-        class="bg-white col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-800 rounded-[30px] p-6 flex flex-col gap-4 h-[560px] hover:shadow-lg dark:hover:shadow-xl hover-trigger">
+        class="bg-white col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-800 rounded-[30px] p-6 flex flex-col gap-4 min-h-[560px] hover:shadow-lg dark:hover:shadow-xl hover-trigger">
         <div class="relative inline-block">
             <span class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block">
                 Work Experience </span>
@@ -38,11 +38,13 @@
             <!-- Projects -->
             <div class="flex flex-wrap mt-2">
                 <!-- Projects -->
-                <span class="text-sm md:text-md font-medium text-sky-500 dark:text-gray-300 md:mb-3 break-keep">Projects : </span>
+                <span class="text-sm md:text-md font-medium text-sky-500 dark:text-gray-300 md:mb-3 break-keep">Projects
+                    : </span>
                 @for (tech of item.projects; track $index) {
                 <!-- project Names -->
                 <a [href]="tech.link" target="_blank">
-                    <span class="text-xs md:text-md m-1 text-sky-800 cursor-pointer whitespace-nowrap">{{tech.name}},</span></a>
+                    <span
+                        class="text-xs md:text-md m-1 text-sky-800 cursor-pointer whitespace-nowrap">{{tech.name}},</span></a>
                 }
             </div>
             <!-- Tech and Tools -->

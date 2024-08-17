@@ -26,6 +26,7 @@
     appearance: none;
     transition: background-color var(--transDur) ease-in-out, box-shadow 0.15s ease-in-out;
     position: relative;
+    border: none;
 }
 
 .theme__toggle:before {
@@ -47,7 +48,7 @@
 .theme__toggle:checked:before {
     background-color: hsl(198, 90%, 55%);
     transform: translateX(3em);
-    
+
 }
 
 .theme__icon-wrap {

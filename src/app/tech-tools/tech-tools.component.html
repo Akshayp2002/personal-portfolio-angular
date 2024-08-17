@@ -1,21 +1,17 @@
 <div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 p-4 px-12 xl:px-32 pb-20 content">
+    
     <div
-        class="bg-white col-span-2 md:col-span-1 lg:col-span-2 dark:bg-gray-800 rounded-[30px] p-5 sm:p-8 flex flex-col gap-4 h-[280px] hover:shadow-lg dark:hover:shadow-xl">
+        class="bg-white col-span-2 md:col-span-1 lg:col-span-2 dark:bg-gray-800 rounded-[30px] p-5 sm:p-8 flex flex-col gap-4 h-auto hover:shadow-lg dark:hover:shadow-xl">
         <img class="w-16 lg:w-24" src="assets/img/okeeeey.svg" alt="">
         <div class="relative inline-block">
-            <p class="font-medium text-gray-500 dark:text-gray-300 text-md">I’m
-                <span class="font-bold font-playwrite text-2xl text-black dark:text-white relative inline-block">
-                    Akshay
-                    <img src="assets/img/line-1.svg" alt="line" class="absolute border-bottom-2 left-0 w-full h-4">
-                </span>, I actively use a diverse set of cutting-edge technologies and tools in my daily work. From
-                modern frameworks and
-                languages to powerful platforms, my toolkit ensures high-quality and efficient development. 🚀 🌟
+            <p class="font-medium text-gray-500 dark:text-gray-300 text-md">{{tools}}
             </p>
         </div>
     </div>
+    
     @for (item of items; track $index) {
     <div
-        class="bg-white col-span-2 md:col-span-1 lg:col-span-1 rounded-[30px]  flex flex-col justify-center hover:shadow-lg h-[280px] dark:bg-gray-800 dark:text-white items-start relative group">
+        class="bg-white col-span-2 md:col-span-1 lg:col-span-1 rounded-[30px]  flex flex-col justify-center hover:shadow-lg min-h-[280px] dark:bg-gray-800 dark:text-white items-start relative group">
         <!-- Image positioned in the top left corner, ensuring it stays circular and shows all content -->
         <div class="m-5">
             <div class="w-12 h-12 flex items-center justify-center absolute inset-x-0 top-0 ml-6 mt-6">

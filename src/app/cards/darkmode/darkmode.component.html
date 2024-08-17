@@ -1,0 +1,9 @@
+<div
+    class="bg-white rounded-[30px] p-6 md:p-10 flex flex-col justify-center hover:shadow-lg h-[280px] dark:bg-gray-800 dark:text-white items-center">
+    <label for="theme" class="theme" (click)="toggleDarkMode()">
+        <span class="theme__toggle-wrap">
+            <input id="theme" class="theme__toggle" type="radio" role="switch" name="theme"
+                [checked]="darkModeService.darkModeSignel() === 'dark'">
+        </span>
+    </label>
+</div>

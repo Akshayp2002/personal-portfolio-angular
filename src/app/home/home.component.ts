@@ -8,14 +8,14 @@ import { GithubComponent } from '../cards/github/github.component';
 import { HowItStartedComponent } from '../cards/how-it-started/how-it-started.component';
 import { TechsComponent } from '../cards/techs/techs.component';
 import { MapsComponent } from '../cards/maps/maps.component';
-import { SpotifyComponent } from '../cards/spotify/spotify.component';
 import { SocialComponent } from '../cards/social/social.component';
 import { ContactMeComponent } from '../cards/contact-me/contact-me.component';
+import { DarkmodeComponent } from '../cards/darkmode/darkmode.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatSlideToggleModule, ProfileComponent, MapsComponent, TechsComponent, SpotifyComponent, SocialComponent, ContactMeComponent, HowItStartedComponent, GithubComponent, Project1Component, Project2Component],
+  imports: [CommonModule, MatSlideToggleModule, ProfileComponent, MapsComponent, TechsComponent, DarkmodeComponent, SocialComponent, ContactMeComponent, HowItStartedComponent, GithubComponent, Project1Component, Project2Component],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
