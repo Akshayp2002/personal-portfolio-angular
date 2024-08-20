@@ -12,7 +12,7 @@ export class ProjectsComponent {
   projects: Array<any> = [
     {
       name: "Portfolio",
-      description: "A personal portfolio website designed to display my development skills and projects. This highlights my proficiency in Angular, and more, while providing an intuitive and visually engaging experience for visitors",
+      description: "A personal portfolio website designed to display my development skills and projects. This highlights my proficiency in Angular, and more.",
       image: "assets/img/portfolio.webp",
       github: "https://github.com/Akshayp2002/personal-portfolio-angular",
       view: "https://devakshay.vercel.app",
@@ -35,6 +35,10 @@ export class ProjectsComponent {
         {
           name: "typescript",
           image: "assets/img/typescript.svg",
+        },
+        {
+          name: "figma",
+          image: "assets/img/figma.svg",
         },
       ]
     },
@@ -83,7 +87,6 @@ export class ProjectsComponent {
         {
           name: "angular",
           image: "assets/img/angular17.svg",
-
         },
         {
           name: "tailwind",
@@ -96,6 +99,10 @@ export class ProjectsComponent {
         {
           name: "typescript",
           image: "assets/img/typescript.svg",
+        },
+        {
+          name: "openapi",
+          image: "assets/img/openai.svg",
         },
       ]
     },
@@ -165,7 +172,7 @@ export class ProjectsComponent {
     },
     {
       name: "Invoice Generator",
-      description: "A basic invoice generator application with minimal functionality",
+      description: "A basic invoice generator application built with Laravel Breeze and styled with Tailwind CSS. This project offers minimal yet essential functionality for creating, viewing, and managing invoices",
       image: "assets/img/invoice.png",
       github: "https://github.com/Akshayp2002/InvoiceGenerator",
       view: false,
