@@ -1,0 +1,93 @@
+<div class="container mx-auto grid grid-cols-2  lg:grid-cols-4 gap-4 p-4 px-10 xl:px-32 pb-20 content h-full">
+    @for (project of projects; track $index) {
+    <div
+        class="bg-white row-span-2 md:row-span-1 col-span-2 dark:bg-gray-800 rounded-[30px] p-6 flex flex-col gap-4 h-[400px]  md:h-[300px] hover:shadow-lg dark:hover:shadow-xl hover-trigger relative">
+        <div class="grid grid-cols-4">
+            <!-- image -->
+            <div class="md:col-span-2 col-span-4">
+                <img class="w-full h-[100px] md:h-full object-contain rounded-lg p-2" [src]="project.image"
+                    alt="project name">
+            </div>
+
+            <div class="md:col-span-2 col-span-4">
+
+                <!-- titlle -->
+                <h5 class="md:mb-2 text-xl font-bold font-mono text-gray-900 dark:text-white p-2">{{project.name}}</h5>
+
+                <!-- description -->
+                <p class="font-sans text-gray-700 dark:text-gray-300 text-sm p-2 mb-6">{{project.description}}</p>
+
+                <div class="flex gap-5 ml-5">
+                    <!-- techs -->
+                    @for (tech of project.tech; track $index) {
+                    <div class="w-7 h-7 flex items-center justify-center inset-x-0 top-0">
+                        <img class="w-full h-full object-contain" [src]="tech.image" alt="tech">
+                    </div>
+                    }
+                    <p class="text-gray-500 text-sm inset-x-0">more..</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="flex gap-x-8">
+            <!-- website -->
+            @if (project.view != false) {
+            <a href="{{project.view}}" target="_blank">
+                <div
+                    class="bg-gray-300 dark:bg-gray-700 w-10 h-10 rounded-full absolute bottom-0 left-0 m-4 flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400">
+                    <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 18.256 18.256" style="transition:.3s">
+                        <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                            <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581"
+                                transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5">
+                            </path>
+                            <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287"
+                                transform="translate(-7.756 -7)" fill="none" stroke="#0D1117" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5">
+                            </path>
+                        </g>
+                        <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none"></path>
+                    </svg>
+                </div>
+            </a>
+            }
+            <!-- git hub -->
+            @if (project.github != false) {
+            <a href="{{project.github}}" target="_blank">
+                <div
+                    class="w-10 h-10 rounded-full absolute bottom-0 m-4 flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" width="80"
+                        viewBox="-74.4 -120.90175 644.8 725.4105" fill="black">
+                        <path
+                            d="M165.9 389.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2 .6-2-1.3-4.3-4.3-5.2-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 0C106.1 0 0 105.3 0 244c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5 21.3 0 42.8 2.9 62.8 8.5 0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 449.8 496 354.9 496 244 496 105.3 383.5 0 244.8 0zM97.2 344.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                    </svg>
+                </div>
+            </a>
+            }
+            <!-- date -->
+            <div class="absolute bottom-0 right-0 flex items-center space-x-2 m-5">
+                @if (project.demo == true) {
+                <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">Demo
+                    Project</span>
+                }
+                <!-- Project status -->
+                @if (project.status == true) {
+                <span
+                    class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">Open</span>
+                }@else {
+                <span
+                    class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">Closed</span>
+                }
+                <!-- date -->
+                <p class="text-gray-500 text-sm">{{project.date}}</p>
+            </div>
+
+        </div>
+    </div>
+    }
+
+</div>
