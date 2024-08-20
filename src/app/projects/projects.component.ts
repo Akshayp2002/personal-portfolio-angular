@@ -143,7 +143,7 @@ export class ProjectsComponent {
       description: "Swiftrevel champions frictionless fintech, integrating flawlessly with your existing tools and software to eliminate data silos and streamline your workflow.",
       image: "assets/img/swiftrevel.webp",
       github: false,
-      view: "https://devakshay.vercel.app",
+      view: "https://swiftrevel.com",
       status: false,
       date: "may - 2024",
       demo: false,
