@@ -2,7 +2,7 @@
     @for (project of projects; track $index) {
     <div
         class="bg-white row-span-2 md:row-span-1 col-span-2 dark:bg-gray-800 rounded-[30px] p-6 flex flex-col gap-4 h-[400px]  md:h-[300px] hover:shadow-lg dark:hover:shadow-xl hover-trigger relative">
-        <div class="grid grid-cols-4">
+        <div class="grid grid-cols-4 sm:mb-4">
             <!-- image -->
             <div class="md:col-span-2 col-span-4">
                 <img class="w-full h-[100px] md:h-full object-contain rounded-lg p-2" [src]="project.image"
@@ -15,23 +15,23 @@
                 <h5 class="md:mb-2 text-xl font-bold font-mono text-gray-900 dark:text-white p-2">{{project.name}}</h5>
 
                 <!-- description -->
-                <p class="font-sans text-gray-700 dark:text-gray-300 text-sm p-2 mb-6">{{project.description}}</p>
+                <p class="font-sans text-gray-700 dark:text-gray-300 text-xs md:text-sm p-2 mb-6">{{project.description}}</p>
 
-                <div class="flex gap-5 ml-5">
+                <div class="flex gap-5 md:ml-5">
                     <!-- techs -->
                     @for (tech of project.tech; track $index) {
                     <div class="w-7 h-7 flex items-center justify-center inset-x-0 top-0">
                         <img class="w-full h-full object-contain" [src]="tech.image" alt="tech">
                     </div>
                     }
-                    <p class="text-gray-500 text-sm inset-x-0">more..</p>
+                    <!-- <p class="text-gray-500 text-sm inset-x-0">more..</p> -->
                 </div>
 
             </div>
         </div>
 
 
-        <div class="flex gap-x-8">
+        <div class="flex gap-x-5 md:gap-x-8">
             <!-- website -->
             @if (project.view != false) {
             <a href="{{project.view}}" target="_blank">
@@ -68,7 +68,7 @@
             </a>
             }
             <!-- date -->
-            <div class="absolute bottom-0 right-0 flex items-center space-x-2 m-5">
+            <div class="absolute bottom-0 right-0 sm:flex items-center space-x-2 m-5">
                 @if (project.demo == true) {
                 <span
                     class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">Demo
