@@ -75,6 +75,34 @@ export class ProjectsComponent {
       ]
     },
     {
+      name: "Quotes Generator",
+      description: "Get inspired instantly with our Quote Generator app, using API Ninja. Click to receive a new, uplifting quote from a wide range of categories and let each day be filled with wisdom and motivation.",
+      image: "assets/img/quotes.webp",
+      github: "https://github.com/Akshayp2002/quote-generator",
+      view: "https://quote-inspire.vercel.app",
+      status: false,
+      date: "augest - 2024",
+      demo: true,
+      tech: [
+        {
+          name: "angular",
+          image: "assets/img/angular17.svg",
+        },
+        {
+          name: "tailwind",
+          image: "assets/img/tailwindcss.svg",
+        },
+        {
+          name: "typescript",
+          image: "assets/img/typescript.svg",
+        },
+        {
+          name: "openapi",
+          image: "assets/img/ninja.png",
+        },
+      ]
+    },
+    {
       name: "Instagram",
       description: "A clone of Instagram, the popular social media platform, allowing users to browse, post, and interact with content in a visually appealing and user-friendly environment.",
       image: "assets/img/instagram.webp",
