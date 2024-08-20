@@ -1,17 +1,18 @@
 <div class="container mx-auto grid grid-cols-2  lg:grid-cols-4 gap-4 p-4 px-10 xl:px-32 pb-20 content h-full">
     @for (project of projects; track $index) {
     <div
-        class="bg-white row-span-2 md:row-span-1 col-span-2 dark:bg-gray-800 rounded-[30px] p-6 flex flex-col gap-4 md:h-[300px] hover:shadow-lg dark:hover:shadow-xl hover-trigger relative">
+        class="bg-white row-span-2 md:row-span-1 col-span-2 dark:bg-gray-800 rounded-[30px] p-6 flex flex-col gap-4 h-[400px]  md:h-[300px] hover:shadow-lg dark:hover:shadow-xl hover-trigger relative">
         <div class="grid grid-cols-4">
             <!-- image -->
-            <div class="lg:col-span-2 col-span-4">
-                <img class="w-full h-full object-contain rounded-lg" [src]="project.image" alt="project name">
+            <div class="md:col-span-2 col-span-4">
+                <img class="w-full h-[100px] md:h-full object-contain rounded-lg p-2" [src]="project.image"
+                    alt="project name">
             </div>
 
-            <div class="lg:col-span-2 col-span-4">
+            <div class="md:col-span-2 col-span-4">
 
                 <!-- titlle -->
-                <h5 class="mb-2 text-xl font-bold font-mono text-gray-900 dark:text-white p-2">{{project.name}}</h5>
+                <h5 class="md:mb-2 text-xl font-bold font-mono text-gray-900 dark:text-white p-2">{{project.name}}</h5>
 
                 <!-- description -->
                 <p class="font-sans text-gray-700 dark:text-gray-300 text-sm p-2 mb-6">{{project.description}}</p>
@@ -32,6 +33,7 @@
 
         <div class="flex gap-x-8">
             <!-- website -->
+            @if (project.view != false) {
             <a href="{{project.view}}" target="_blank">
                 <div
                     class="bg-gray-300 dark:bg-gray-700 w-10 h-10 rounded-full absolute bottom-0 left-0 m-4 flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400">
@@ -51,7 +53,7 @@
                     </svg>
                 </div>
             </a>
-
+            }
             <!-- git hub -->
             @if (project.github != false) {
             <a href="{{project.github}}" target="_blank">
