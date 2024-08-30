@@ -181,6 +181,11 @@ export class TechToolsComponent {
       link: 'https://swiperjs.com/',
       image: 'assets/img/swipper.svg'
     },
-
+    {
+      name: "API-Ninjas",
+      description: 'API Ninjas is a data company that enables you to build real applications using real data. API Ninjas maintains 78 APIs',
+      link: 'https://api-ninjas.com/',
+      image: 'assets/img/ninja.png'
+    },
   ];
 }
