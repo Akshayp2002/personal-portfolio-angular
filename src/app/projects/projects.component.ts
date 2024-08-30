@@ -79,7 +79,35 @@ export class ProjectsComponent {
       description: "Get inspired instantly with our Quote Generator app, using API Ninja. Click to receive a new, uplifting quote from a wide range of categories and let each day be filled with wisdom and motivation.",
       image: "assets/img/quotes.webp",
       github: "https://github.com/Akshayp2002/quote-generator",
-      view: "https://quote-inspire.vercel.app",
+      view: "https://timspass.vercel.app/quotes",
+      status: false,
+      date: "augest - 2024",
+      demo: true,
+      tech: [
+        {
+          name: "angular",
+          image: "assets/img/angular17.svg",
+        },
+        {
+          name: "tailwind",
+          image: "assets/img/tailwindcss.svg",
+        },
+        {
+          name: "typescript",
+          image: "assets/img/typescript.svg",
+        },
+        {
+          name: "openapi",
+          image: "assets/img/ninja.png",
+        },
+      ]
+    },
+    {
+      name: "QRCode Generate",
+      description: "This tool is perfect for anyone needing a quick and reliable way to create QR codes for personal or professional use.",
+      image: "assets/img/qrcode-page.webp",
+      github: "https://github.com/Akshayp2002/quote-generator",
+      view: "https://timspass.vercel.app/qrcode",
       status: false,
       date: "augest - 2024",
       demo: true,
