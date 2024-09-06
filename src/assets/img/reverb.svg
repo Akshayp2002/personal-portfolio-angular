@@ -1,0 +1,24 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>laravel reverb logo</title>
+    <style>
+        circle { fill: none; stroke: #f25700; stroke-width:3 }
+        path{ fill: black }
+        @media (prefers-color-scheme:dark) { path { fill:white } }
+    </style>
+    <defs><circle id="a" cx="32" cy="32" r="32" /></defs>
+    <clipPath id="b"><use xlink:href="#a" style="overflow:visible" /></clipPath>
+    <g style="clip-path:url(#b)">
+        <circle opacity=".9" cx="43.5" cy="11.4" r="4.8" />
+        <circle opacity=".6" cx="43.5" cy="11.4" r="10.6" />
+        <circle opacity=".4" cx="43.5" cy="11.4" r="16.4" />
+        <circle opacity=".2" cx="43.5" cy="11.4" r="22.2" />
+        <circle opacity=".9" cx="45.4" cy="53.8" r="4.8" />
+        <circle opacity=".6" cx="45.4" cy="53.8" r="10.6" />
+        <circle opacity=".4" cx="45.4" cy="53.8" r="16.4" />
+        <circle opacity=".2" cx="45.4" cy="53.8" r="22.2" />
+        <circle opacity=".8" cx="8.7" cy="27.8" r="4.8" />
+        <circle opacity=".5" cx="8.7" cy="27.8" r="10.6" />
+        <circle opacity=".3" cx="8.7" cy="27.8" r="16.4" />
+        <circle opacity=".2" cx="8.7" cy="27.8" r="22.2" />
+    </g>
+</svg>

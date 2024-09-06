@@ -187,5 +187,17 @@ export class TechToolsComponent {
       link: 'https://api-ninjas.com/',
       image: 'assets/img/ninja.png'
     },
+    {
+      name: "Laravel Reverb",
+      description: 'Reverb is a first-party WebSocket server for Laravel applications, bringing real-time communication between client and server directly to your fingertips.',
+      link: 'https://reverb.laravel.com/',
+      image: 'assets/img/reverb.svg'
+    },
+    {
+      name: "Laravel Pulse",
+      description: 'Laravel Pulse is a real-time application performance monitoring tool and dashboard for your Laravel application. ',
+      link: 'https://pulse.laravel.com/',
+      image: 'assets/img/pulse.svg'
+    },
   ];
 }
