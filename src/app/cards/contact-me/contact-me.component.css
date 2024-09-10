@@ -1,24 +1,137 @@
-
 /* text */
 .text {
-    position: absolute;
-    right: 0%;
-    width: 0%;
-    opacity: 0;
-    color: rgb(0, 0, 0);
-    transition-duration: .3s;
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: rgb(0, 0, 0);
+  transition-duration: 0.3s;
 }
 
 /* hover effect button's text */
 .Btn:hover .text {
-    opacity: 1;
-    width: 80%;
-    transition-duration: .4s;
-    padding-right: 10px;
-    white-space: nowrap;
+  opacity: 1;
+  width: 80%;
+  transition-duration: 0.4s;
+  padding-right: 10px;
+  white-space: nowrap;
 }
 
 /* button click effect*/
 .Btn:active {
-    transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+}
+
+/* From Uiverse.io by axy1976 */
+
+.btn-copy {
+  /* button */
+
+  /* tooltip */
+  --tooltip-bg: #f4f3f3;
+  --toolptip-border-radius: 4px;
+  --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+  --tooltip-font-size: 12px;
+  /* 👆 this field should not be empty */
+  --tootip-text-color: rgb(50, 50, 50);
+  --tooltip-padding-x: 7px;
+  --tooltip-padding-y: 7px;
+  --tooltip-offset: 8px;
+  --tooltip-transition-duration: 0.3s;
+}
+
+.btn-copy {
+  box-sizing: border-box;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.btn-copy > .cp-tooltip {
+  position: absolute;
+  opacity: 0;
+  visibility: 0;
+  top: -20;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: var(--tooltip-font-size) var(--tooltip-font-family);
+  color: var(--tootip-text-color);
+  background: var(--tooltip-bg);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  border-radius: var(--toolptip-border-radius);
+  pointer-events: none;
+  transition: all var(--tooltip-transition-duration)
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn-copy > .cp-tooltip::before {
+  content: attr(data-text-initial);
+}
+
+.btn-copy > .cp-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+  width: var(--tooltip-padding-y);
+  height: var(--tooltip-padding-y);
+  background: inherit;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -999;
+  pointer-events: none;
+}
+
+.btn-copy svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cp-check-mark {
+  display: none;
+}
+
+/* actions */
+
+.btn-copy:hover .cp-tooltip,
+.btn-copy:focus:not(:focus-visible) .cp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc((100% + var(--tooltip-offset)) * -1);
+  margin: -39px;
+left: 40px;
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-tooltip::before {
+  content: attr(data-text-end);
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-clipboard {
+  display: none;
+}
+
+.btn-copy:focus:not(:focus-visible) .cp-check-mark {
+  display: block;
+}
+
+.btn-copy:hover,
+.btn-copy:focus {
+  background-color: var(--button-hover-bg);
+}
+
+.btn-copy:active {
+  outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.btn-copy:hover svg {
+  color: var(--button-hover-text-color);
 }
