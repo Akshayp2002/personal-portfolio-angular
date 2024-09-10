@@ -1,9 +1,46 @@
 <div
     class="bg-white rounded-[30px] p-6 md:p-10 flex flex-col justify-center hover:shadow-lg h-[280px] dark:bg-gray-800 dark:text-white items-center">
+
+    <input id="switch" type="checkbox" [checked]="darkModeService.darkModeSignel() === 'dark'"
+        (change)="toggleDarkMode()">
+    <div class="app" [class.dark]="darkModeService.darkModeSignel() === 'dark'">
+        <div class="body">
+            <div class="phone">
+                <div class="menu">
+                    <div class="time"></div>
+                    <div class="icons">
+                        <div class="network"></div>
+                        <div class="battery"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="circle">
+                        <div class="crescent"></div>
+                    </div>
+
+                    <label for="switch">
+                        <div class="toggle"></div>
+                        <div class="names">
+                            <p class="light">Light</p>
+                            <p class="dark">Dark</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- old toggle-->
+
+<!-- <div
+    class="bg-white rounded-[30px] p-6 md:p-10 flex flex-col justify-center hover:shadow-lg h-[280px] dark:bg-gray-800 dark:text-white items-center">
     <label for="theme" class="theme" (click)="toggleDarkMode()">
         <span class="theme__toggle-wrap">
             <input id="theme" class="theme__toggle" type="radio" role="switch" name="theme"
                 [checked]="darkModeService.darkModeSignel() === 'dark'">
         </span>
     </label>
-</div>
+</div> -->

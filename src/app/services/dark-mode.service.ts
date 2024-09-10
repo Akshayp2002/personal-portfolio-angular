@@ -6,17 +6,23 @@ import { effect, Injectable, signal } from '@angular/core';
 export class DarkModeService {
 
   darkModeSignel = signal<string>(
-    JSON.parse(window.localStorage.getItem('darkModeSignel')?? 'null')
+    JSON.parse(window.localStorage.getItem('darkModeSignel') ?? '"null"')
   );
 
-  updateDarkMode(){
-    this.darkModeSignel.update((value)=> (value === "dark" ? "null" :"dark"))
+  updateDarkMode() {
+    const newMode = this.darkModeSignel() === 'dark' ? 'null' : 'dark';
+    this.darkModeSignel.set(newMode);
   }
 
-
-  constructor() { 
-    effect(()=>{
-      window.localStorage.setItem('darkModeSignel',JSON.stringify(this.darkModeSignel()))
-    })
+  constructor() {
+    effect(() => {
+      window.localStorage.setItem('darkModeSignel', JSON.stringify(this.darkModeSignel()));
+      // Update the body class globally to reflect the mode change.
+      if (this.darkModeSignel() === 'dark') {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    });
   }
 }
