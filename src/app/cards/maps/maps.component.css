@@ -16,3 +16,43 @@
         transform: scale(1);
     }
 }
+
+.default-image {
+    transition: opacity 0.2s;
+}
+
+.hover-image {
+    display: none;
+    transition: opacity 0.2s;
+}
+
+.hover-shake:hover .default-image {
+    display: none;
+}
+
+.hover-shake:hover .hover-image {
+    display: block;
+}
+.shake {
+    transition: transform 0.2s;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-5deg) scale(1.1); }
+    50% { transform: rotate(5deg) scale(1.1); }
+    75% { transform: rotate(-5deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.hover-shake:hover .shake {
+    animation: shake 2s infinite;
+}
+
+.hover-shake:hover .default-image {
+    display: none;
+}
+
+.hover-shake:hover .hover-image {
+    display: block;
+}
