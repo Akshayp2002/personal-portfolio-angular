@@ -3,7 +3,7 @@
         <h2 class="font-bold font-playwrite text-sky-800 text-[25px] lg:text-[20px]"
             (click)="confettiService.clickPopper()"><a routerLink="/home">Akshay</a>
         </h2>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse" (click)="toggleMenu()">
             <button data-collapse-toggle="navbar-sticky" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-sticky" aria-expanded="false">
@@ -16,27 +16,32 @@
             </button>
         </div>
 
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"
+            [ngClass]="{'hidden': !isMenuOpen}">
             <ul
                 class="flex flex-col md:p-1 mt-2 rounded-[20px] md:rounded-[30px] md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 border-[1px] border-gray-300 dark:border-gray-700 text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-blue-600 font-playwrite">
-                <a routerLink="/home" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700">
+                <a routerLink="/home" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                    (click)="closeMenu()">
                     <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
                         <span> Home </span>
                     </li>
                 </a>
                 <a routerLink="/about"
                     routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700">
-                    <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
+                    <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation"
+                        (click)="closeMenu()">
                         <span> About </span>
                     </li>
                 </a>
-                <a routerLink="/tools"
-                    routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700">
+                <a routerLink="/tools" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                    (click)="closeMenu()">
                     <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
                         <span> Tools </span>
                     </li>
                 </a>
-                <a routerLink="/projects" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700">
+                <a routerLink="/projects"
+                    routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                    (click)="closeMenu()">
                     <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
                         <span> Projects </span>
                     </li>
