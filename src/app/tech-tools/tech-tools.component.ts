@@ -111,7 +111,7 @@ export class TechToolsComponent {
     },
     {
       name: "Figma",
-      description: 'Figma is a powerful, collaborative design tool for teams. Explore ideas and gather feedback, build realistic prototypes, and streamline product development with design systems.',
+      description: 'Figma is a powerful, collaborative design tool for teams. Explore ideas and gather feedback, build realistic prototypes.',
       link: 'https://www.figma.com',
       image: 'assets/img/figma.svg'
     },
@@ -198,6 +198,12 @@ export class TechToolsComponent {
       description: 'Laravel Pulse is a real-time application performance monitoring tool and dashboard for your Laravel application. ',
       link: 'https://pulse.laravel.com/',
       image: 'assets/img/pulse.svg'
+    },
+    {
+      name: "Contentful",
+      description: 'Contentful is a cloud-based content management system (CMS) that allows users to create, store, and manage content for websites, mobile apps, and other platforms. ',
+      link: 'https://www.contentful.com/',
+      image: 'assets/img/contentful.png'
     },
   ];
 }
