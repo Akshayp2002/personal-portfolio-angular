@@ -4,6 +4,10 @@
             (click)="confettiService.clickPopper()"><a routerLink="/home">Akshay</a>
         </h2>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse" (click)="toggleMenu()">
+            <div class="flex gap-2 items-center" (click)="confettiService.clickPopper()">
+                <img class="w-full h-full object-contain" src="assets/img/india.svg" alt="tech">
+                <p class="text-sm font-mono text-gray-900 dark:text-white">Indian</p>
+            </div>
             <button data-collapse-toggle="navbar-sticky" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-sticky" aria-expanded="false">
@@ -54,5 +58,6 @@
                 </a>
             </ul>
         </div>
+
     </div>
 </nav>
