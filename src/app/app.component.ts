@@ -14,19 +14,25 @@ import { animate, style, transition, trigger } from '@angular/animations';
   standalone: true,
   imports: [RouterOutlet, CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
   animations: [
-    trigger('enter', [
+    trigger('reveal', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'scale(0.7)' }),  // Changed 'scale' to 'transform' for smoothness
-        animate(
-          '1000ms cubic-bezier(0.25, 0.8, 0.25, 1)',  // Smooth cubic-bezier easing
-          style({ opacity: 1, transform: 'scale(1)' })
+        style({
+          opacity: 0,
+          filter: 'blur(10px)',
+          transform: 'translateX(-30px)'
+        }),
+        animate('1500ms cubic-bezier(0.5, 0, 0.5, 1)',
+          style({
+            opacity: 1,
+            filter: 'blur(0)',
+            transform: 'translateX(0)'
+          })
         )
       ])
     ])
   ]
-
 })
 
 export class AppComponent implements OnInit {
