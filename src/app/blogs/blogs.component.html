@@ -12,18 +12,18 @@
                 <img class="w-full h-[100px] md:h-full object-contain rounded-lg p-2"
                     [src]="blogPosts.fields.poster.fields.file.url" alt="project name">
             </div>
-        
+
             <div class="md:col-span-3 col-span-4">
                 <!-- Title -->
                 <h5 class="md:mb-2 lg:text-xl font-bold font-mono text-gray-900 dark:text-white p-2">
                     {{ blogPosts.fields.heading }}
                 </h5>
-        
+
                 <!-- Description -->
                 <p class="font-sans text-gray-700 dark:text-gray-300 text-xs md:text-sm p-2 mb-3">
                     {{ blogPosts.fields.quickLook }}
                 </p>
-        
+
                 <div class="flex flex-wrap items-center">
                     <ng-container *ngFor="let tag of blogPosts.fields.tags; let index = index">
                         <span [ngStyle]="{'background-color': tag.color}"
@@ -40,7 +40,7 @@
             <div class="md:flex gap-x-5 md:gap-x-8">
                 <!-- website -->
                 @if (blogPosts.fields.link != false) {
-                <a href="{{blogPosts.fields.link}}" target="_blank">
+                <a href="{{blogPosts.fields.link}}?ref=https://devakshay.vercel.app" target="_blank">
                     <div
                         class="bg-gray-300 dark:bg-gray-700 w-10 h-10 rounded-full absolute bottom-0 left-0 m-4 flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400 hover:transition duration-700 ease-in-out">
                         <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="20" height="20"

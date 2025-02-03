@@ -1,5 +1,5 @@
 <div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 p-4 px-12 xl:px-32 pb-20 content">
-    
+
     <div
         class="bg-white col-span-2 md:col-span-1 lg:col-span-2 dark:bg-gray-800 rounded-[30px] p-5 sm:p-8 flex flex-col gap-4 h-auto hover:shadow-lg dark:hover:shadow-xl">
         <img class="w-16 lg:w-24" src="assets/img/okeeeey.svg" alt="">
@@ -8,7 +8,7 @@
             </p>
         </div>
     </div>
-    
+
     @for (item of items; track $index) {
     <div
         class="bg-white col-span-2 md:col-span-1 lg:col-span-1 rounded-[30px]  flex flex-col justify-center hover:shadow-lg min-h-[280px] dark:bg-gray-800 dark:text-white items-start relative group">
@@ -23,7 +23,7 @@
                 <h2 class="text-2xl roboto-mono-500 text-gray-800 dark:text-white">{{item.name}}</h2>
                 <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">{{item.description}}</p>
             </div>
-            <a href="{{item.link}}" target="_blank">
+            <a href="{{item.link}}?ref=https://devakshay.vercel.app" target="_blank">
                 <div
                     class="bg-gray-300 dark:bg-gray-700 w-10 h-10 rounded-full absolute bottom-0 left-0 m-4 flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400 hover:transition duration-700 ease-in-out">
                     <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
