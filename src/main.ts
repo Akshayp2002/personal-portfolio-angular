@@ -6,5 +6,5 @@ import { AppComponent } from './app/app.component';
 setTimeout(()=>{
   bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
-})
+},2500)
 
