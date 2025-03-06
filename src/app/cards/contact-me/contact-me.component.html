@@ -12,7 +12,7 @@
         <span class="mr-2">Contact:</span>
         <span>sr.dev.akshay&#64;gmail.com</span>
 
-        <button class="btn-copy ml-4" [cdkCopyToClipboard]="value" (click)="confettiService.celebrate()">
+        <button class="btn-copy ml-4" [cdkCopyToClipboard]="value" (click)="confettiService.fireworks()">
             <span data-text-end="Copied!" data-text-initial="Copy to clipboard" class="cp-tooltip"></span>
             <span>
                 <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0"
@@ -39,6 +39,16 @@
             <img src="assets/img/copyclip.svg" alt="Copy icon" class="w-5 h-5">
         </button> -->
     </p>
+    <div class="flex items-center font-medium text-gray-500 flex items-center relative dark:text-white">
+        <a href="https://github.com/Akshayp2002/personal-portfolio-angular"
+            cdkCopyToClipboard="https://github.com/Akshayp2002/personal-portfolio-angular" (click)="handleClick($event)"
+            class="mr-2 flex items-center">
+            <span class="mr-2">Star my project if you like what you see!</span>
+            <img src="assets/img/star.gif" class="w-12 lg:w-12" alt="star">
+        </a>
+    </div>
+
+
     <div class="h-44 flex justify-start">
         <form action="mailto:sr.dev.akshay@gmail.com" method="post" enctype="text/plain" class="form" data-form
             target="_blank">
