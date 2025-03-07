@@ -19,6 +19,7 @@ export class ProjectsComponent {
       status: false,
       date: "augest - 2024",
       demo: false,
+      personal: true,
       tech: [
         {
           name: "Angular",
@@ -71,6 +72,71 @@ export class ProjectsComponent {
         {
           name: "bootstrap",
           image: "assets/img/bootstrap.svg",
+        },
+      ]
+    },
+    {
+      name: "Rugr",
+      description: "Rugr play acrucial role in the modem financial ecosystem by facilitating between merchants and related stakeholders.",
+      image: "assets/img/rugr.png",
+      github: false,
+      view: "https://rugr.com",
+      status: false,
+      date: "february - 2025",
+      demo: false,
+      tech: [
+        {
+          name: "laravel",
+          image: "assets/img/laravel.svg",
+        },
+        {
+          name: "mysql",
+          image: "assets/img/mysql.svg",
+        },
+        {
+          name: "tailwind",
+          image: "assets/img/tailwindcss.svg",
+        },
+        {
+          name: "nextjs",
+          image: "assets/img/nextjs2.svg",
+        },
+        {
+          name: "typescript",
+          image: "assets/img/typescript.svg",
+        },
+      ]
+    },
+    {
+      name: "Home Lab System",
+      description: "The Home Lab System is a self-hosted environment where various technologies are deployed and tested .The system leverages containerization with Docker and includes various other software solutions.",
+      image: "assets/img/homelabs.png",
+      github: "https://github.com/Akshayp2002/homelab/tree/main",
+      view: false,
+      status: true,
+      date: "january - 2025",
+      demo: false,
+      personal: true,
+      tech: [
+        {
+          name: "Docker",
+          image: "assets/img/docker.svg",
+        },
+        {
+          name: "Jellyfin",
+          image: "assets/img/jellyfin.svg",
+        },
+        {
+          name: "tailscale",
+          image: "assets/img/tailscale.svg",
+        },
+        {
+          name: "immich",
+          image: "assets/img/immich.svg",
+        },
+        {
+          name: "linux",
+          image: "assets/img/linux.svg",
         },
       ]
     },
