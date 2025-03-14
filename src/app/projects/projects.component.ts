@@ -233,7 +233,7 @@ export class ProjectsComponent {
       description: "A Netflix clone that allows browsing and viewing TV shows using data from an open API, featuring a responsive and user-friendly interface.",
       image: "assets/img/netflix-cole.webp",
       github: "https://github.com/Akshayp2002/Akshayp2002",
-      view: "https://netflix-clone-angular-chi.vercel.app",
+      view: "https://demo-movie-app-gamma.vercel.app",
       status: false,
       date: "June - 2024",
       demo: true,
