@@ -109,7 +109,7 @@ export class ProjectsComponent {
     },
     {
       name: "Home Lab System",
-      description: "The Home Lab System is a self-hosted environment where various technologies are deployed and tested .The system leverages containerization with Docker and includes various other software solutions.",
+      description: "The Home Lab System is a self-hosted setup in my house, using an old computer to run private services with Docker and other software solutions.",
       image: "assets/img/homelabs.png",
       github: "https://github.com/Akshayp2002/homelab/tree/main",
       view: false,
@@ -232,7 +232,7 @@ export class ProjectsComponent {
       name: "Netflix",
       description: "A Netflix clone that allows browsing and viewing TV shows using data from an open API, featuring a responsive and user-friendly interface.",
       image: "assets/img/netflix-cole.webp",
-      github: "https://github.com/Akshayp2002/Akshayp2002",
+      github: "https://github.com/Akshayp2002/netflix-clone-angular",
       view: "https://demo-movie-app-gamma.vercel.app",
       status: false,
       date: "June - 2024",

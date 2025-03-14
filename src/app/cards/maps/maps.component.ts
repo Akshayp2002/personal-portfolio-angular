@@ -18,7 +18,7 @@ export class MapsComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.loadMapUrl();
-    }, 1000)
+    })
   }
 
   loadMapUrl(): void {
