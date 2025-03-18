@@ -17,7 +17,7 @@ export class ProjectsComponent {
       github: "https://github.com/Akshayp2002/personal-portfolio-angular",
       view: "https://devakshay.vercel.app",
       status: false,
-      date: "augest - 2024",
+      date: "Augest - 2024",
       demo: false,
       personal: true,
       tech: [
@@ -50,7 +50,7 @@ export class ProjectsComponent {
       github: false,
       view: "https://myhinez.com/",
       status: false,
-      date: "may - 2024",
+      date: "May - 2024",
       demo: false,
       tech: [
         {
@@ -82,7 +82,7 @@ export class ProjectsComponent {
       github: false,
       view: "https://rugr.com",
       status: false,
-      date: "february - 2025",
+      date: "February - 2025",
       demo: false,
       tech: [
         {
@@ -114,7 +114,7 @@ export class ProjectsComponent {
       github: "https://github.com/Akshayp2002/homelab/tree/main",
       view: false,
       status: true,
-      date: "january - 2025",
+      date: "January - 2025",
       demo: false,
       personal: true,
       tech: [
@@ -147,7 +147,7 @@ export class ProjectsComponent {
       github: "https://github.com/Akshayp2002/quote-generator",
       view: "https://timspass.vercel.app/quotes",
       status: false,
-      date: "augest - 2024",
+      date: "Augest - 2024",
       demo: true,
       tech: [
         {
@@ -175,7 +175,7 @@ export class ProjectsComponent {
       github: "https://github.com/Akshayp2002/quote-generator",
       view: "https://timspass.vercel.app/qrcode",
       status: false,
-      date: "augest - 2024",
+      date: "Augest - 2024",
       demo: true,
       tech: [
         {
@@ -203,7 +203,7 @@ export class ProjectsComponent {
       github: "https://github.com/Akshayp2002/instagram-angular",
       view: "https://devinstagram.vercel.app",
       status: true,
-      date: "july - 2024",
+      date: "July - 2024",
       demo: true,
       tech: [
         {
@@ -267,7 +267,7 @@ export class ProjectsComponent {
       github: false,
       view: "https://swiftrevel.com",
       status: false,
-      date: "may - 2024",
+      date: "May - 2024",
       demo: false,
       tech: [
         {
@@ -285,6 +285,34 @@ export class ProjectsComponent {
         {
           name: "Apidog",
           image: "assets/img/apidog-icon.svg",
+        },
+        {
+          name: "Mysql",
+          image: "assets/img/mysql.svg",
+        },
+      ]
+    },
+    {
+      name: "Farmers Copper",
+      description: "Farmer’s Copper Ltd. extends its services throughout many industries. Provide the raw copper alloy materials in various standard shapes as well as custom cut copper alloys.",
+      image: "assets/img/farmers-copper.png",
+      github:false,
+      view: false,
+      status: false,
+      date: "November - 2023",
+      demo: false,
+      tech: [
+        {
+          name: "Laravel",
+          image: "assets/img/laravel.svg",
+        },
+        {
+          name: "HTML",
+          image: "assets/img/html5.svg",
+        },
+        {
+          name: "CSS",
+          image: "assets/img/css3.svg",
         },
         {
           name: "Mysql",
@@ -331,7 +359,7 @@ export class ProjectsComponent {
       github: "https://github.com/Akshayp2002/Student-360",
       view: false,
       status: false,
-      date: "april - 2022",
+      date: "April - 2022",
       demo: false,
       tech: [
         {
