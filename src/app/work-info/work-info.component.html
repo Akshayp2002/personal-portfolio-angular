@@ -1,6 +1,6 @@
 <h1 class="text-3xl font-semibold flex justify-between items-center p-6 border-b dark:bg-gray-800 dark:text-white">
     <!-- {{ details?.name }} -->
-    <span class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block">
+    <span class="font-bold font-playwrite text-2xl text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-blue-600 inline-block">
         Work Experience </span>
     <button class="text-gray-500 hover:text-gray-700" (click)="onClose()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -12,7 +12,7 @@
 <div class="p-6 space-y-5 dark:bg-gray-900 dark:text-gray-200 overflow-auto max-h-[80vh]">
     <!-- details Info Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block m-x-3"> {{ details?.company }}
+        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-3"> {{ details?.company }} <span class="text-xs text-gray-500 dark:text-gray-300 font-sans">{{ details?.place }}.</span>
         </h3>
         <p>{{ details?.position }}</p>
         <div class="flex gap-2">
@@ -20,14 +20,14 @@
         </div>
     </div>
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block m-x-2">Overview</h3>
+        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-2">Overview</h3>
         <p class="font-medium text-gray-500 dark:text-gray-300 text-md">
             {{ details?.overview }}
         </p>
     </div>
     <!-- Role Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block m-x-3">My Role</h3>
+        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-3">My Role</h3>
         <p class="font-medium text-gray-500 dark:text-gray-300 text-md">
             {{ details?.my_role }}
         </p>
@@ -36,7 +36,7 @@
     <!-- Projects Section -->
 
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block m-x-3 pb-4">Projects</h3>
+        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-3 pb-4">Projects</h3>
         <ul class="list-none pl-6 space-y-2 flex gap-4">
             @for (tech of details.projects; track $index) {
             <li>
@@ -50,7 +50,7 @@
 
     <!-- Skills Acquired Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block m-x-4">Skills Acquired</h3>
+        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-4">Skills Acquired</h3>
         <div class="flex gap-5 md:ml-5 mt-5">
             @for (tech of details.tech; track $index) {
             <div class="w-7 h-7 flex items-center justify-center inset-x-0 top-0 relative group gap-3">
@@ -67,7 +67,7 @@
 
     <!-- Impact Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block m-x-3">Impact</h3>
-        <p>{{details?.impact}}</p>
+        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-3">Impact</h3>
+        <p class="font-medium text-gray-500 dark:text-gray-300 text-md">{{details?.impact}}</p>
     </div>
 </div>
