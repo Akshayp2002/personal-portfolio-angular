@@ -25,14 +25,17 @@ export class AboutComponent {
         {
           name: "MyHinez",
           link: '#',
-        },
-        {
-          name: "Starling Fintech",
-          link: '#',
+          image: "assets/img/hinez.webp",
         },
         {
           name: "Swiftrevel",
           link: '#',
+          image: "assets/img/swiftrevel.webp",
+        },
+        {
+          name: "Rugr",
+          link: '#',
+          image: "assets/img/rugr.png",
         },
       ],
       tech: [
@@ -75,6 +78,7 @@ export class AboutComponent {
         {
           name: "Farmers Copper",
           link: '#',
+          image: "assets/img/farmers-copper.png",
         },
       ],
       tech: [
