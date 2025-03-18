@@ -20,8 +20,14 @@
                 <div class="flex gap-5 md:ml-5">
                     <!-- techs -->
                     @for (tech of project.tech; track $index) {
-                    <div class="w-7 h-7 flex items-center justify-center inset-x-0 top-0">
+                    <div class="w-7 h-7 flex items-center justify-center inset-x-0 top-0 relative group">
                         <img class="w-full h-full object-contain" [src]="tech.image" alt="tech">
+                    
+                        <!-- Tooltip -->
+                        <div
+                            class="tooltip hidden group-hover:block absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs font-semibold py-1 px-2 rounded">
+                            {{ tech.name }}
+                        </div>
                     </div>
                     }
                     <!-- <p class="text-gray-500 text-sm inset-x-0">more..</p> -->

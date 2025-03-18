@@ -205,5 +205,17 @@ export class TechToolsComponent {
       link: 'https://www.contentful.com/',
       image: 'assets/img/contentful.png'
     },
+    {
+      name: "Daily.Dev",
+      description: 'Daily.dev is a professional network for developers, designed to help them improve their skills, collaborate with like-minded individuals, and grow within the developer community. ',
+      link: 'https://daily.dev',
+      image: 'assets/img/dailydev.svg'
+    },
+    {
+      name: "Microsoft Loop",
+      description: 'Loop is a note-taking platform that helps users organize, collaborate, and manage their notes efficiently.',
+      link: 'https://loop.cloud.microsoft/learn',
+      image: 'assets/img/loop.svg'
+    },
   ];
 }

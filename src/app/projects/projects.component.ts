@@ -26,19 +26,19 @@ export class ProjectsComponent {
           image: "assets/img/angular17.svg",
         },
         {
-          name: "tailwind",
+          name: "Tailwind",
           image: "assets/img/tailwindcss.svg",
         },
         {
-          name: "flowbite",
+          name: "Flowbite",
           image: "assets/img/flowbite.svg",
         },
         {
-          name: "typescript",
+          name: "Typescript",
           image: "assets/img/typescript.svg",
         },
         {
-          name: "figma",
+          name: "Figma",
           image: "assets/img/figma.svg",
         },
       ]
@@ -54,23 +54,23 @@ export class ProjectsComponent {
       demo: false,
       tech: [
         {
-          name: "php",
+          name: "PHP",
           image: "assets/img/php.svg",
         },
         {
-          name: "laravel",
+          name: "Laravel",
           image: "assets/img/laravel.svg",
         },
         {
-          name: "splade",
+          name: "Splade",
           image: "assets/img/splade.svg",
         },
         {
-          name: "flowbite",
+          name: "Mysql",
           image: "assets/img/mysql.svg",
         },
         {
-          name: "bootstrap",
+          name: "Bootstrap",
           image: "assets/img/bootstrap.svg",
         },
       ]
@@ -86,23 +86,23 @@ export class ProjectsComponent {
       demo: false,
       tech: [
         {
-          name: "laravel",
+          name: "Laravel",
           image: "assets/img/laravel.svg",
         },
         {
-          name: "mysql",
+          name: "Mysql",
           image: "assets/img/mysql.svg",
         },
         {
-          name: "tailwind",
+          name: "Tailwind",
           image: "assets/img/tailwindcss.svg",
         },
         {
-          name: "nextjs",
+          name: "Nextjs",
           image: "assets/img/nextjs2.svg",
         },
         {
-          name: "typescript",
+          name: "Typescript",
           image: "assets/img/typescript.svg",
         },
       ]
@@ -127,15 +127,15 @@ export class ProjectsComponent {
           image: "assets/img/jellyfin.svg",
         },
         {
-          name: "tailscale",
+          name: "Tailscale",
           image: "assets/img/tailscale.svg",
         },
         {
-          name: "immich",
+          name: "Immich",
           image: "assets/img/immich.svg",
         },
         {
-          name: "linux",
+          name: "Linux",
           image: "assets/img/linux.svg",
         },
       ]
@@ -151,19 +151,19 @@ export class ProjectsComponent {
       demo: true,
       tech: [
         {
-          name: "angular",
+          name: "Angular",
           image: "assets/img/angular17.svg",
         },
         {
-          name: "tailwind",
+          name: "Tailwind",
           image: "assets/img/tailwindcss.svg",
         },
         {
-          name: "typescript",
+          name: "Typescript",
           image: "assets/img/typescript.svg",
         },
         {
-          name: "openapi",
+          name: "Apininja",
           image: "assets/img/ninja.png",
         },
       ]
@@ -179,19 +179,19 @@ export class ProjectsComponent {
       demo: true,
       tech: [
         {
-          name: "angular",
+          name: "Angular",
           image: "assets/img/angular17.svg",
         },
         {
-          name: "tailwind",
+          name: "Tailwind",
           image: "assets/img/tailwindcss.svg",
         },
         {
-          name: "typescript",
+          name: "Typescript",
           image: "assets/img/typescript.svg",
         },
         {
-          name: "openapi",
+          name: "Apininja",
           image: "assets/img/ninja.png",
         },
       ]
@@ -207,23 +207,23 @@ export class ProjectsComponent {
       demo: true,
       tech: [
         {
-          name: "angular",
+          name: "Angular",
           image: "assets/img/angular17.svg",
         },
         {
-          name: "tailwind",
+          name: "Tailwind",
           image: "assets/img/tailwindcss.svg",
         },
         {
-          name: "flowbite",
+          name: "Flowbite",
           image: "assets/img/flowbite.svg",
         },
         {
-          name: "typescript",
+          name: "Typescript",
           image: "assets/img/typescript.svg",
         },
         {
-          name: "openapi",
+          name: "ChatGPT",
           image: "assets/img/openai.svg",
         },
       ]
@@ -239,23 +239,23 @@ export class ProjectsComponent {
       demo: true,
       tech: [
         {
-          name: "angular",
+          name: "Angular",
           image: "assets/img/angular17.svg",
         },
         {
-          name: "tailwind",
+          name: "Tailwind",
           image: "assets/img/tailwindcss.svg",
         },
         {
-          name: "flowbite",
+          name: "Flowbite",
           image: "assets/img/flowbite.svg",
         },
         {
-          name: "swipper",
+          name: "Swipper",
           image: "assets/img/swipper.svg",
         },
         {
-          name: "tmdb",
+          name: "Tmdb",
           image: "assets/img/tmdb.svg",
         },
       ]
@@ -275,19 +275,19 @@ export class ProjectsComponent {
           image: "assets/img/laravel.svg",
         },
         {
-          name: "tailwind",
+          name: "Tailwind",
           image: "assets/img/tailwindcss.svg",
         },
         {
-          name: "nextjs",
+          name: "Nextjs",
           image: "assets/img/nextjs2.svg",
         },
         {
-          name: "apidog",
+          name: "Apidog",
           image: "assets/img/apidog-icon.svg",
         },
         {
-          name: "mysql",
+          name: "Mysql",
           image: "assets/img/mysql.svg",
         },
       ]
@@ -307,19 +307,19 @@ export class ProjectsComponent {
           image: "assets/img/laravel.svg",
         },
         {
-          name: "tailwind",
+          name: "Tailwind",
           image: "assets/img/tailwindcss.svg",
         },
         {
-          name: "flowbite",
+          name: "Flowbite",
           image: "assets/img/flowbite.svg",
         },
         {
-          name: "vite",
+          name: "Vite",
           image: "assets/img/vitejs.svg",
         },
         {
-          name: "mysql",
+          name: "Mysql",
           image: "assets/img/mysql.svg",
         },
       ]
@@ -335,23 +335,23 @@ export class ProjectsComponent {
       demo: false,
       tech: [
         {
-          name: "nodejs",
+          name: "Nodejs",
           image: "assets/img/nodejs.svg",
         },
         {
-          name: "bootstrap",
+          name: "Bootstrap",
           image: "assets/img/bootstrap.svg",
         },
         {
-          name: "mongodb",
+          name: "MongoDB",
           image: "assets/img/mongodb.svg",
         },  
         {
-          name: "html",
+          name: "HTML",
           image: "assets/img/html5.svg",
         },
         {
-          name: "javascript",
+          name: "Javascript",
           image: "assets/img/js.svg",
         },
       ]

@@ -10,6 +10,8 @@ import confetti from 'canvas-confetti';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  showPopup = false;
+  animatePopup = false;
   gridCols: string | undefined;
 
   celebrate() {
@@ -23,10 +25,21 @@ export class ProfileComponent implements OnInit {
 
     // Clear confetti after a certain duration
     setTimeout(() => confetti.reset(), duration);
+    
   }
 
   ngOnInit(): void {
     this.updateGridCols(window.innerWidth);
+
+    // Delay the popup and animation by 3 seconds
+    setTimeout(() => {
+      this.showPopup = true;
+      // Trigger the animation after showing the popup
+      setTimeout(() => {
+        this.animatePopup = true;
+      }, 50);  // Small delay to allow DOM to render
+    }, 2500); // 3 seconds delay for popup
+  
   }
 
   @HostListener('window:resize')
@@ -51,6 +64,8 @@ export class ProfileComponent implements OnInit {
       return 'Good Evening';
     }
   }
+
+
   
 }
 

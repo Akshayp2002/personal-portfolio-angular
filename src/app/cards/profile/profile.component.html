@@ -1,42 +1,37 @@
 <div
-    class="bg-white dark:bg-gray-800 rounded-[30px] p-6 flex flex-col md:gap-4 h-[280px] hover:shadow-lg dark:hover:shadow-xl hover-trigger">
+    class="bg-white dark:bg-gray-800 rounded-[30px] p-6 flex flex-col md:gap-4 h-[280px] hover:shadow-lg dark:hover:shadow-xl hover-trigger relative">
 
     <div class="relative w-20 h-20 lg:w-24 lg:h-24 image-container">
-        
-        <div class="absolute -right-32 -top-6 hidden -translate-y-14 rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-3 pb-2 pt-1 font-satoshi text-sm font-semibold leading-none tracking-wide text-white xs:text-lg xl:-right-40 xl:-top-2 xl:block xl:text-lg"
-            style="filter: blur(0px); opacity: 1; transform: none;">
+        <!-- Popup element inside image container -->
+        <div *ngIf="showPopup" [ngClass]="{
+               'popUp absolute -right-32 -top-6 opacity-0 transform translate-y-14 transition-all duration-700 ease-out rounded-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-400 px-3 pb-2 pt-1 font-satoshi text-sm font-semibold leading-none tracking-wide text-white xs:text-lg xl:-right-40 xl:-top-2 xl:block xl:text-lg': true,
+               'opacity-100 transform translate-y-0': animatePopup
+             }" style="transition: opacity 700ms ease-out, transform 700ms ease-out;">
             <span class="inline-block text-base">{{getGreeting()}}!</span>
             <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="absolute -bottom-[11px] left-5 w-5 rotate-2 text-orange-500">
                 <path
                     d="M20.473.465c-2.222 5.25-5.185 9.662-10.413 12.585C9.04 6.101 6.946 4.072-.096 1.182L3.5 1l14-.5 2.973-.035z"
-                    fill="currentColor">
-                </path>
+                    fill="currentColor"></path>
             </svg>
         </div>
+
         <!-- Default Image -->
         <img class="default-image w-full h-full object-cover" src="assets/img/Me.png" alt="default image">
 
         <!-- Hover Image -->
         <img class="hover-image w-full h-full object-cover" src="assets/img/mecloud.png" alt="hover image">
     </div>
+
     <div class="relative inline-block">
-
-        <!-- <button (click)="startConfetti()">Celebrate!</button>
-        <div class="celebration-popup" *ngIf="showPopup">sdd
-        </div> -->
-
         <p class="font-medium text-gray-500 dark:text-gray-300 text-md">
             I’m
             <span class="font-bold font-playwrite text-sm md:text-2xl text-black dark:text-white relative inline-block">
                 Akshay
                 <img src="assets/img/line-1.svg" alt="line" class="absolute border-bottom-2 left-0 w-full h-4">
-            </span>,an enthusiastic Software developer from Kerala, India. I’m passionate about PHP, Laravel, Tailwind
-            CSS, technology, and
-            music, and I’m dedicated to using my skills to create impactful solutions.
+            </span>, an enthusiastic Software developer from Kerala, India. I’m passionate about PHP, Laravel, Tailwind
+            CSS, technology, and music, and I’m dedicated to using my skills to create impactful solutions.
         </p>
     </div>
+
 </div>
-
-
-
