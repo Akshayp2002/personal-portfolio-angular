@@ -34,7 +34,7 @@ body.toggle-active select {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/assets/fonts/google.ttf') format('woff2'),
+  src: url('./assets/fonts/google.ttf') format('woff2'),
 }
 
 .font-playwrite {

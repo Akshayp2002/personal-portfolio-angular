@@ -11,13 +11,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './blogs.component.css'
 })
 export class BlogsComponent {
-
+  loading: boolean = true; // Added loading state
 
   constructor(private contentfulService: ContentfulService){ }
 
   blogPost$ : Observable<any> | undefined;
   ngOnInit(): void {
     this.blogPost$ =  this.contentfulService.getAllEntires();
-    
+    this.blogPost$.subscribe({
+      next: () => (this.loading = false),
+      error: () => (this.loading = false), // Handle errors too
+    });
   }
 }

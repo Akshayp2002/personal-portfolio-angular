@@ -1,4 +1,10 @@
 <main *ngIf="blogPost$ |  async as blogPost">
+    <!-- Loading Spinner -->
+    <ng-template #loading>
+        <div class="flex justify-center items-center h-40">
+            <div class="animate-spin rounded-full h-10 w-10 border-t-4 border-blue-500 border-solid"></div>
+        </div>
+    </ng-template>
     <div class="container mx-auto grid grid-cols-2 gap-4 p-4 px-10 xl:px-32 pb-20 content h-full">
         @for (blogPosts of blogPost.items; track $index) {
         <!-- <pre>{{blogPosts | json}}</pre> -->
@@ -6,36 +12,34 @@
             class="bg-white row-span-2 md:row-span-1 col-span-2 dark:bg-gray-800 rounded-[30px] p-3 md:p-6 flex flex-col gap-4 h-[350px]  md:h-[270px] hover:shadow-lg dark:hover:shadow-xl hover-trigger relative">
 
 
-        <div class="grid grid-cols-4 sm:mb-4">
-            <!-- Image -->
-            <div class="md:col-span-1 col-span-4">
-                <img class="w-full h-[100px] md:h-full object-contain rounded-lg p-2"
-                    [src]="blogPosts.fields.poster.fields.file.url" alt="project name">
-            </div>
+            <div class="grid grid-cols-4 sm:mb-4">
+                <!-- Image -->
+                <div class="md:col-span-1 col-span-4">
+                    <img class="w-full h-[100px] md:h-full object-contain rounded-lg p-2"
+                        [src]="blogPosts.fields.poster.fields.file.url" alt="project name">
+                </div>
 
-            <div class="md:col-span-3 col-span-4">
-                <!-- Title -->
-                <h5 class="md:mb-2 lg:text-xl font-bold font-mono text-gray-900 dark:text-white p-2">
-                    {{ blogPosts.fields.heading }}
-                </h5>
+                <div class="md:col-span-3 col-span-4">
+                    <!-- Title -->
+                    <h5 class="md:mb-2 lg:text-xl font-bold font-mono text-gray-900 dark:text-white p-2">
+                        {{ blogPosts.fields.heading }}
+                    </h5>
 
-                <!-- Description -->
-                <p class="font-sans text-gray-700 dark:text-gray-300 text-xs md:text-sm p-2 mb-3">
-                    {{ blogPosts.fields.quickLook }}
-                </p>
+                    <!-- Description -->
+                    <p class="font-sans text-gray-700 dark:text-gray-300 text-xs md:text-sm p-2 mb-3">
+                        {{ blogPosts.fields.quickLook }}
+                    </p>
 
-                <div class="flex flex-wrap items-center">
-                    <ng-container *ngFor="let tag of blogPosts.fields.tags; let index = index">
-                        <span [ngStyle]="{'background-color': tag.color}"
-                            class="text-white text-xs font-medium me-2 mb-1 px-2 py-0.5 rounded-full">
-                            #{{ tag.name }}
-                        </span>
-                    </ng-container>
+                    <div class="flex flex-wrap items-center">
+                        <ng-container *ngFor="let tag of blogPosts.fields.tags; let index = index">
+                            <span [ngStyle]="{'background-color': tag.color}"
+                                class="text-white text-xs font-medium me-2 mb-1 px-2 py-0.5 rounded-full">
+                                #{{ tag.name }}
+                            </span>
+                        </ng-container>
+                    </div>
                 </div>
             </div>
-        </div>
-
-
 
             <div class="md:flex gap-x-5 md:gap-x-8">
                 <!-- website -->
