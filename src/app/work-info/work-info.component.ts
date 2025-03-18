@@ -41,7 +41,7 @@ PixelForge Studios encouraged a culture of innovation and teamwork.I regularly p
         {
           name: "Rugr",
           link: '#',
-          image: "assets/img/rugr.png",
+          image: "assets/img/rugr.webp",
         },
       ],
       skillsAcquired: [
@@ -85,7 +85,7 @@ PixelForge Studios encouraged a culture of innovation and teamwork.I regularly p
         {
           name: "Farmers Copper",
           link: '#',
-          image: "assets/img/farmers-copper.png",
+          image: "assets/img/farmers-copper.webp",
         },
       ],
       skillsAcquired: [

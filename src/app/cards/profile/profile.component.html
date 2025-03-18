@@ -4,7 +4,7 @@
     <div class="relative w-20 h-20 lg:w-24 lg:h-24 image-container">
         <!-- Popup element inside image container -->
         <div *ngIf="showPopup" [ngClass]="{
-               'popUp absolute -right-32 -top-6 opacity-0 transform translate-y-14 transition-all duration-700 ease-out rounded-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-400 px-3 pb-2 pt-1 font-satoshi text-sm font-semibold leading-none tracking-wide text-white xs:text-lg xl:-right-40 xl:-top-2 xl:block xl:text-lg': true,
+               'popUp absolute -right-32 -top-6 opacity-0 transform translate-y-4 transition-all duration-700 ease-out rounded-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-400 px-3 pb-2 pt-1 font-satoshi text-sm font-semibold leading-none tracking-wide text-white xs:text-lg xl:-right-40 xl:-top-2 xl:block xl:text-lg': true,
                'opacity-100 transform translate-y-0': animatePopup
              }" style="transition: opacity 700ms ease-out, transform 700ms ease-out;">
             <span class="inline-block text-base">{{getGreeting()}}!</span>

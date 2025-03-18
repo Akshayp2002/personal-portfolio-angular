@@ -41,7 +41,11 @@ export class AboutComponent {
       time_period: "March 2023 - Present",
       place: "Chennai Tamilnadu India",
       overview: 'A leading provider of tech solutions focusing on innovative software development.',
-      my_role: `At Cloudrevel Innovations, I am actively involved in designing and implementing database structures to ensure efficient data management and system scalability. My primary focus is on backend development, where I build and maintain core application logic using Laravel and MySQL while implementing secure and scalable APIs for seamless data flow. I work closely with the frontend team to ensure smooth API integrations and improve application responsiveness. Additionally, I specialize in SSO authentication implementation, enhancing security and user authentication processes. Performance optimization is a key part of my role, where I continuously refine database queries, caching mechanisms, and server-side processes to improve overall application efficiency.`,
+      my_role: `At Cloudrevel Innovations, I am actively involved in designing and implementing database structures to ensure efficient data management and system scalability.
+       My primary focus is on backend development, where I build and maintain core application logic using Laravel and MySQL while implementing secure and scalable APIs for seamless data flow.
+        I work closely with the frontend team to ensure smooth API integrations and improve application responsiveness.
+         Additionally, I specialize in SSO authentication implementation, enhancing security and user authentication processes.
+         Performance optimization is a key part of my role, where I continuously refine database queries, caching mechanisms, and server-side processes to improve overall application efficiency.`,
       impact: '‍My experience at Cloudrevel Innovations has strengthened my ability to architect, optimize, and implement backend solutions for complex enterprise applications. Being deeply involved in database design, API development, and performance tuning has allowed me to build robust and scalable systems that ensure both efficiency and long-term maintainability. Collaborating closely with the frontend team has refined my problem-solving skills and reinforced my passion for developing seamless, high-performing applications.',
       projects: [
         {
@@ -57,7 +61,7 @@ export class AboutComponent {
         {
           name: "Rugr",
           link: '#',
-          image: "assets/img/rugr.png",
+          image: "assets/img/rugr.webp",
         },
       ],
       tech: [
@@ -146,7 +150,7 @@ export class AboutComponent {
         {
           name: "Farmers Copper",
           link: '#',
-          image: "assets/img/farmers-copper.png",
+          image: "assets/img/farmers-copper.webp",
         },
       ],
       tech: [

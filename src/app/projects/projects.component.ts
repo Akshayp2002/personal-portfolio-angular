@@ -78,7 +78,7 @@ export class ProjectsComponent {
     {
       name: "Rugr",
       description: "Rugr play acrucial role in the modem financial ecosystem by facilitating between merchants and related stakeholders.",
-      image: "assets/img/rugr.png",
+      image: "assets/img/rugr.webp",
       github: false,
       view: "https://rugr.com",
       status: false,
@@ -295,7 +295,7 @@ export class ProjectsComponent {
     {
       name: "Farmers Copper",
       description: "Farmer’s Copper Ltd. extends its services throughout many industries. Provide the raw copper alloy materials in various standard shapes as well as custom cut copper alloys.",
-      image: "assets/img/farmers-copper.png",
+      image: "assets/img/farmers-copper.webp",
       github:false,
       view: false,
       status: false,
