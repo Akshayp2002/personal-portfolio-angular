@@ -110,7 +110,7 @@ export class ProjectsComponent {
     {
       name: "Home Lab System",
       description: "The Home Lab System is a self-hosted setup in my house, using an old computer to run private services with Docker and other software solutions.",
-      image: "assets/img/homelabs.png",
+      image: "assets/img/homelabs.webp",
       github: "https://github.com/Akshayp2002/homelab/tree/main",
       view: false,
       status: true,
