@@ -1,10 +1,35 @@
+<div *ngIf="loading" class="flex justify-center items-center min-h-screen">
+    <!-- From Uiverse.io by Nawsome -->
+    <div class="boxes">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
 <main *ngIf="blogPost$ |  async as blogPost">
     <!-- Loading Spinner -->
-    <ng-template #loading>
-        <div class="flex justify-center items-center h-40">
-            <div class="animate-spin rounded-full h-10 w-10 border-t-4 border-blue-500 border-solid"></div>
-        </div>
-    </ng-template>
+
     <div class="container mx-auto grid grid-cols-2 gap-4 p-4 px-10 xl:px-32 pb-20 content h-full">
         @for (blogPosts of blogPost.items; track $index) {
         <!-- <pre>{{blogPosts | json}}</pre> -->
