@@ -19,6 +19,3 @@
 }
 
 /* Add the animation class */
-.click-animation:active {
-    animation: click-effect 0.2s ease;
-}
