@@ -23,4 +23,5 @@ export class BlogsComponent {
       error: () => (this.loading = false), // Handle errors too
     });
   }
+
 }
