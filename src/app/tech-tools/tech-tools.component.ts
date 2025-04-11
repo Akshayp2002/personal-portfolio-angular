@@ -136,8 +136,14 @@ export class TechToolsComponent {
     {
       name: "Linux",
       description: 'Linux is a free and open-source operating system kernel used in many distributions for servers, desktops, and embedded systems.',
-      link: 'https://www.kernel.org/',
+      link: 'https://ubuntu.com/',
       image: 'assets/img/linux.svg'
+    },
+    {
+      name: "Ubuntu",
+      description: 'Ubuntu is a popular free and open-source Linux-based operating system, is used for a wide range of purposes, including powering desktops, servers, cloud platforms.',
+      link: 'https://www.kernel.org/',
+      image: 'assets/img/ubuntu.svg'
     },
     {
       name: "Visual Studio Code",
@@ -146,9 +152,9 @@ export class TechToolsComponent {
       image: 'assets/img/vscode.svg'
     },
     {
-      name: "OpenAI",
-      description: 'OpenAI is an AI research lab that aims to ensure that artificial general intelligence benefits all of humanity.',
-      link: 'https://www.openai.com/',
+      name: "ChatGPT",
+      description: 'ChatGPT is an AI chatbot developed by OpenAI, is used for content writing, and assisting with coding, all through natural language processing.',
+      link: 'https://chatgpt.com/',
       image: 'assets/img/openai.svg'
     },
     {
@@ -217,5 +223,18 @@ export class TechToolsComponent {
       link: 'https://loop.cloud.microsoft/learn',
       image: 'assets/img/loop.svg'
     },
+    {
+      name: "Affine",
+      description: 'AFFiNE is an open-source, all-in-one workspace that combines the features of note-taking, project management, and collaboration tools like Notion',
+      link: 'https://affine.pro',
+      image: 'assets/img/affine.svg'
+    },
+    {
+      name: "Docker",
+      description: 'Docker is a software platform that facilitates building, testing, and deploying applications efficiently by packaging them into standardized units called containers.',
+      link: 'https://www.docker.com',
+      image: 'assets/img/docker.svg'
+    },
+
   ];
 }

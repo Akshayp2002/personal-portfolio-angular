@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  scroll-behavior: smooth;
+}
 body {
         cursor: url('https://res.cloudinary.com/daily-now/image/upload/s--Q3mKadUU--/f_auto/v1730101530/public/Bd%20cursor'), auto;
 
