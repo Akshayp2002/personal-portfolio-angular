@@ -1,8 +1,8 @@
 <h1 class="text-3xl font-semibold flex justify-between items-center p-6 border-b dark:bg-gray-800 dark:text-white">
-    <!-- {{ details?.name }} -->
     <span
         class="font-bold font-playwrite text-2xl text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-blue-600 inline-block">
-        Work Experience </span>
+        Work Experience
+    </span>
     <button class="text-gray-500 hover:text-gray-700" (click)="onClose()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -11,41 +11,44 @@
 </h1>
 
 <div class="p-6 space-y-5 dark:bg-gray-900 dark:text-gray-200 overflow-auto max-h-[80vh]">
-    <!-- details Info Section -->
+
+    <!-- Company Info Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-3"> {{
-            details?.company }} <span class="text-xs text-gray-500 dark:text-gray-300 font-sans">{{ details?.place
-                }}.</span>
+        <h3 class="text-md md:text-xl roboto-mono-500 bold text-2xl text-sky-800 dark:text-white inline-block mx-3">
+            {{ details?.company }}
+            <span class="text-xs text-gray-500 dark:text-gray-300 font-sans">{{ details?.place }}.</span>
         </h3>
-        <p class=" pl-3">{{ details?.position }}</p>
+        <p class="pl-3">{{ details?.position }}</p>
         <div class="flex gap-2 pl-3">
             <p>{{ details?.time_period }}</p>
         </div>
     </div>
+
+    <!-- Overview Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-2">Overview</h3>
-        <p class="font-medium text-gray-500 dark:text-gray-300 text-md  pl-3">
+        <h3 class="text-md md:text-xl roboto-mono-500 bold text-2xl text-sky-800 dark:text-white inline-block mx-3">Overview</h3>
+        <p class="font-medium text-gray-500 dark:text-gray-300 text-md pl-3">
             {{ details?.overview }}
         </p>
     </div>
-    <!-- Role Section -->
+
+    <!-- My Role Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-3">My Role</h3>
-        <p class="font-medium text-gray-500 dark:text-gray-300 text-md  pl-3">
+        <h3 class="text-md md:text-xl roboto-mono-500 bold text-2xl text-sky-800 dark:text-white inline-block mx-3">My Role</h3>
+        <p class="font-medium text-gray-500 dark:text-gray-300 text-md pl-3">
             {{ details?.my_role }}
         </p>
     </div>
 
     <!-- Projects Section -->
-
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-3 pb-4">Projects</h3>
+        <h3 class="text-md md:text-xl roboto-mono-500 bold text-2xl text-sky-800 dark:text-white inline-block mx-3 pb-4">Projects</h3>
         <ul class="list-none pl-6 space-y-2 flex gap-4">
             @for (tech of details.projects; track $index) {
             <li>
                 <img class="w-32 sm:w-36 object-contain hover:shadow-lg dark:hover:shadow-xl" [src]="tech.image"
                     alt="projects">
-                <p class="font-medium text-gray-500 dark:text-gray-300 text-sm">{{tech.name}}</p>
+                <p class="font-medium text-gray-500 dark:text-gray-300 text-sm">{{ tech.name }}</p>
             </li>
             }
         </ul>
@@ -53,17 +56,19 @@
 
     <!-- Skills Acquired Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block">Skills Acquired</h3>
+        <h3 class="text-md md:text-xl roboto-mono-500 bold text-2xl text-sky-800 dark:text-white inline-block mx-3">Skills Acquired
+        </h3>
         <div class="flex gap-5 md:ml-5 mb-4">
-            <!-- Scrollable Container -->
-            <div class="overflow-x-auto flex gap-5 md:ml-5 mt-5 max-w-full relative">
+            <div
+                class="flex gap-5 md:ml-5 mt-5 max-w-full relative overflow-x-auto scrollbar-thin scrollbar-thumb-sky-600">
                 @for (tech of details.tech; track $index) {
-                <div class="w-12 h-12 flex items-center justify-center relative group gap-4 shrink-0">
-                    <img class="w-12 h-12 object-contain" [src]="tech.image" alt="tech">
-                    <!-- Tooltip -->
-                    <div
-                        class="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs font-semibold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-50">
-                        {{ tech.name }}
+                <div class="w-12 h-12 flex items-center justify-center relative group shrink-0">
+                    <img class="w-12 h-12 object-contain block" [src]="tech.image" alt="tech">
+                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max z-50">
+                        <div
+                            class="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-700 text-white text-xs font-semibold py-1 px-2 rounded whitespace-nowrap">
+                            {{ tech.name }}
+                        </div>
                     </div>
                 </div>
                 }
@@ -73,6 +78,9 @@
 
     <!-- Impact Section -->
     <div>
-        <h3 class="font-bold font-playwrite text-2xl text-sky-800 dark:text-white inline-block m-x-3">Impact</h3>
-        <p class="font-medium text-gray-500 dark:text-gray-300 text-md pl-3">{{details?.impact}}</p>
+        <h3 class="text-md md:text-xl roboto-mono-500 bold text-2xl text-sky-800 dark:text-white inline-block mx-3">Impact</h3>
+        <p class="font-medium text-gray-500 dark:text-gray-300 text-md pl-3">
+            {{ details?.impact }}
+        </p>
     </div>
+</div>

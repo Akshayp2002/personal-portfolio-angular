@@ -36,9 +36,73 @@ export class AboutComponent {
   work: Array<any> = [
     {
       id: 1,
+      company: "I Trend Solution",
+      position: "Software Engineer",
+      time_period: "May 2025 - Present",
+      place: "Chennai Tamilnadu India",
+      overview: "iTrend Solution is a leading e-commerce company that specializes in the sale of a wide range of products on popular international platforms such as Amazon, eBay, Shopify, Walmart etc.",
+      my_role:"The role at iTrend Solution involved full-stack development within a two-person team, building an internal Amazon Seller Partner (SP) inventory management platform. Responsibilities covered the entire development lifecycle, from database architecture and user interface design to backend logic implementation and process automation.",
+      impact: "Invaluable experience was gained working directly with the Amazon SP-API and other vital third-party APIs, which significantly expanded knowledge of real-time inventory management and demonstrated the ability to build robust, automated solutions with tools like cron jobs.",
+      projects: [
+        {
+          name: "Amazon SP Manager",
+          link: '#',
+          image: "assets/img/itrend-sp.webp",
+        },
+      ],
+      tech: [
+        {
+          name: "laravel",
+          link: 'https://laravel.com/',
+          image: 'assets/img/laravel.svg'
+        },
+        {
+          name: "php",
+          link: 'https://www.php.net/',
+          image: 'assets/img/php.svg'
+        },
+        {
+          name: "Mysql",
+          link: 'https://www.mysql.com/',
+          image: 'assets/img/mysql.svg'
+        },
+        {
+          name: "HTML5",
+          link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+          image: 'assets/img/html5.svg'
+        },
+        {
+          name: "CSS3",
+          link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          image: 'assets/img/css3.svg'
+        },
+        {
+          name: "JavaScript",
+          link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+          image: 'assets/img/js.svg'
+        },
+        {
+          name: "jQuery",
+          link: 'https://jquery.com/',
+          image: 'assets/img/jquery.svg'
+        },
+        {
+          name: "Visual Studio Code",
+          link: 'https://code.visualstudio.com/',
+          image: 'assets/img/vscode.svg'
+        },
+        {
+          name: "Github",
+          link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+          image: 'assets/img/github.svg'
+        },
+      ]
+    },
+    {
+      id: 2,
       company: "Cloudrevel Innovation",
       position: "Software Engineer",
-      time_period: "March 2023 - Present",
+      time_period: "March 2023 - Apr 2025",
       place: "Chennai Tamilnadu India",
       overview: 'A leading provider of tech solutions focusing on innovative software development.',
       my_role: `At Cloudrevel Innovations, I am actively involved in designing and implementing database structures to ensure efficient data management and system scalability.
@@ -138,7 +202,7 @@ export class AboutComponent {
       ]
     },
     {
-      id: 2,
+      id: 3,
       company: "AOF Engineering Systems, LLC",
       position: "Junior developer",
       time_period: "Sep 2022 - Feb 2023",

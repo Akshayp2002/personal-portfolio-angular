@@ -108,6 +108,35 @@ export class ProjectsComponent {
       ]
     },
     {
+      name: "Amazon SP Manager",
+      description: "An app that uses Amazon's SP-API to automate and optimize inventory management for sellers.",
+      image: "assets/img/itrend-sp.webp",
+      github: false,
+      view: false,
+      status: true,
+      date: "May - 2025",
+      demo: false,
+      personal: false,
+      tech: [
+        {
+          name: "Laravel",
+          image: "assets/img/laravel.svg",
+        },
+        {
+          name: "Mysql",
+          image: "assets/img/mysql.svg",
+        },
+        {
+          name: "Bootstrap",
+          image: "assets/img/bootstrap.svg",
+        },
+        {
+          name: "Amazon SP",
+          image: "assets/img/aws.svg",
+        },
+      ]
+    },
+    {
       name: "Home Lab System",
       description: "The Home Lab System is a self-hosted setup in my house, using an old computer to run private services with Docker and other software solutions.",
       image: "assets/img/homelabs.webp",
