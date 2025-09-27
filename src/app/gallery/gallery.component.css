@@ -1,0 +1,94 @@
+.gallery-container {
+  position: relative;
+  z-index: 2;
+  /* padding: 1rem; */
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85); /* darker popup background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* optional, for depth */
+  opacity: 1;
+transform: scale(1);
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Image fades in after zoom */
+.image-wrapper img {
+  max-height: 80vh;
+  max-width: 95vw;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  opacity: 0;
+  animation: fadeInImage 0.3s ease forwards;
+  /* animation-delay: 0.5s; starts after container animation */
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0; /* full viewport */
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  opacity: 0;
+  animation: fadeOverlay 0.5s ease forwards;
+}
+
+@keyframes fadeOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Buttons same as before */
+.close-btn,
+.prev-btn,
+.next-btn {
+  position: fixed;
+  color: rgb(200, 200, 200);
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 3;
+  transition: color 0.2s;
+}
+.close-btn {
+  top: 2%;
+  right: 2%;
+}
+.prev-btn {
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.next-btn {
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  color: #fff;
+}

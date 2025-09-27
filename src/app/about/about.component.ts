@@ -11,15 +11,15 @@ import { WorkInfoComponent } from '../work-info/work-info.component';
 export class AboutComponent {
   constructor(private dialog: MatDialog) { }
 
-  openPopup(companyId: any): void {
-    console.log(companyId);
+  openPopup(company: any): void {
+
     const dialogWidth = window.innerWidth > 768 ? '800px' : '90%';
 
     this.dialog.open(WorkInfoComponent, {
 
       width: '80%',
       maxWidth: '1200px',
-      data: companyId
+      data: company
     });
   }
 
@@ -48,6 +48,12 @@ export class AboutComponent {
           name: "Amazon SP Manager",
           link: '#',
           image: "assets/img/itrend-sp.webp",
+          gallery: [
+            { image: "assets/img/projects/itrend-login.webp", name: "Login" },
+            { image: "assets/img/itrend-sp.webp", name: "Dashboard" },
+            { image: "assets/img/projects/itrend-notifications.webp", name: "Notifications" },
+            { image: "assets/img/projects/itrend-product.webp", name: "Products" }
+          ]
         },
       ],
       tech: [
@@ -116,16 +122,25 @@ export class AboutComponent {
           name: "MyHinez",
           link: '#',
           image: "assets/img/hinez.webp",
+          gallery: [
+            { image: "assets/img/hinez.webp", name: "Dashboard" },
+          ]
         },
         {
           name: "Swiftrevel",
           link: '#',
           image: "assets/img/swiftrevel.webp",
+          gallery: [
+            { image: "assets/img/swiftrevel.webp", name: "Dashboard" },
+          ]
         },
         {
           name: "Rugr",
           link: '#',
           image: "assets/img/rugr.webp",
+          gallery: [
+            { image: "assets/img/rugr.webp", name: "Dashboard" },
+          ]
         },
       ],
       tech: [
@@ -215,6 +230,9 @@ export class AboutComponent {
           name: "Farmers Copper",
           link: '#',
           image: "assets/img/farmers-copper.webp",
+          gallery: [
+            { image: "assets/img/farmers-copper.webp", name: "Dashboard" },
+          ]
         },
       ],
       tech: [

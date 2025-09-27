@@ -1,0 +1,16 @@
+<div class="gallery-wrapper">
+    <!-- Full-screen dim outside popup -->
+    <div class="overlay" (click)="close()"></div>
+
+    <!-- Popup container with dim background -->
+    <div class="gallery-container">
+        <div class="image-wrapper">
+            <img [src]="images[currentIndex]?.image" alt="{{ images[currentIndex]?.name }}">
+        </div>
+    </div>
+
+    <!-- Buttons outside popup -->
+    <button (click)="close()" class="close-btn">&times;</button>
+    <button (click)="prev()" class="prev-btn">&#10094;</button>
+    <button (click)="next()" class="next-btn">&#10095;</button>
+</div>
