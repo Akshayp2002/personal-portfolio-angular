@@ -1,314 +1,332 @@
 import { Component, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
 import { WorkInfoComponent } from '../work-info/work-info.component';
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
 })
 export class AboutComponent {
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {}
 
   openPopup(company: any): void {
-
     const dialogWidth = window.innerWidth > 768 ? '800px' : '90%';
 
     this.dialog.open(WorkInfoComponent, {
-
       width: '80%',
       maxWidth: '1200px',
-      data: company
+      data: company,
     });
   }
 
-
   // Array of data
-  aboutme: string = `I’m an enthusiastic Laravel developer with experience, 
-                      keen to leverage my robust knowledge in Laravel and related technologies 
-                      to significantly contribute to the company’s success while continuously 
-                      expanding my expertise.I enjoy creating solutions from scratch, exploring 
+  aboutme: string = `I’m an enthusiastic Laravel developer with experience,
+                      keen to leverage my robust knowledge in Laravel and related technologies
+                      to significantly contribute to the company’s success while continuously
+                      expanding my expertise.I enjoy creating solutions from scratch, exploring
                       how things work, and am driven by curiosity to solve complex challenges.`;
-
-
 
   work: Array<any> = [
     {
       id: 1,
-      company: "I Trend Solution",
-      position: "Software Engineer",
-      time_period: "May 2025 - Present",
-      place: "Chennai Tamilnadu India",
-      overview: "iTrend Solution is a leading e-commerce company that specializes in the sale of a wide range of products on popular international platforms such as Amazon, eBay, Shopify, Walmart etc.",
-      my_role:"The role at iTrend Solution involved full-stack development within a two-person team, building an internal Amazon Seller Partner (SP) inventory management platform. Responsibilities covered the entire development lifecycle, from database architecture and user interface design to backend logic implementation and process automation.",
-      impact: "Invaluable experience was gained working directly with the Amazon SP-API and other vital third-party APIs, which significantly expanded knowledge of real-time inventory management and demonstrated the ability to build robust, automated solutions with tools like cron jobs.",
+      company: 'I Trend Solution',
+      position: 'Software Engineer',
+      time_period: 'May 2025 - Present',
+      place: 'Chennai Tamilnadu India',
+      overview:
+        'iTrend Solution is a leading e-commerce company specializing in selling a wide range of products across major international platforms such as Amazon',
+      my_role:
+        'As a Full-Stack Developer at iTrend Solution, I worked on building and maintaining an internal Amazon Seller Partner (SP) inventory management platform, integrating multiple warehouse APIs, and developing Amazon Ads management solutions. My responsibilities spanned the entire development lifecycle from database architecture and backend logic to user interface design and process automation. I also implemented AI-driven recommendations to optimize bidding and budget allocation for ad campaigns, ensuring better sales performance. Additionally, I managed server-side deployments, handled server administration, and optimized system performance.',
+      impact:
+        'This role provided invaluable hands-on experience with Amazon SP-API, Amazon Ads API, and other critical third-party APIs. I gained deep expertise in real-time inventory synchronization, automated workflow creation (using cron jobs), and scalable architecture design. Working on AI-based ad optimization and multi-warehouse integrations demonstrated my ability to deliver robust, data-driven solutions that improved efficiency and sales outcomes.',
       projects: [
         {
-          name: "Amazon SP Manager",
+          name: 'Amazon SP Manager',
           link: '#',
-          image: "assets/img/itrend-sp.webp",
+          image: 'assets/img/itrend-sp.webp',
           gallery: [
-            { image: "assets/img/projects/itrend-login.webp", name: "Login" },
-            { image: "assets/img/itrend-sp.webp", name: "Dashboard" },
-            { image: "assets/img/projects/itrend-notifications.webp", name: "Notifications" },
-            { image: "assets/img/projects/itrend-product.webp", name: "Products" }
-          ]
+            { image: 'assets/img/projects/itrend-login.webp', name: 'Login' },
+            { image: 'assets/img/itrend-sp.webp', name: 'Dashboard' },
+            {
+              image: 'assets/img/projects/itrend-notifications.webp',
+              name: 'Notifications',
+            },
+            {
+              image: 'assets/img/projects/itrend-product.webp',
+              name: 'Products',
+            },
+          ],
         },
       ],
       tech: [
         {
-          name: "laravel",
+          name: 'laravel',
           link: 'https://laravel.com/',
-          image: 'assets/img/laravel.svg'
+          image: 'assets/img/laravel.svg',
         },
         {
-          name: "php",
+          name: 'php',
           link: 'https://www.php.net/',
-          image: 'assets/img/php.svg'
+          image: 'assets/img/php.svg',
         },
         {
-          name: "Mysql",
+          name: 'Mysql',
           link: 'https://www.mysql.com/',
-          image: 'assets/img/mysql.svg'
+          image: 'assets/img/mysql.svg',
         },
         {
-          name: "HTML5",
+          name: 'HTML5',
           link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-          image: 'assets/img/html5.svg'
+          image: 'assets/img/html5.svg',
         },
         {
-          name: "CSS3",
+          name: 'CSS3',
           link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-          image: 'assets/img/css3.svg'
+          image: 'assets/img/css3.svg',
         },
         {
-          name: "JavaScript",
+          name: 'JavaScript',
           link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-          image: 'assets/img/js.svg'
+          image: 'assets/img/js.svg',
         },
         {
-          name: "jQuery",
+          name: 'jQuery',
           link: 'https://jquery.com/',
-          image: 'assets/img/jquery.svg'
+          image: 'assets/img/jquery.svg',
         },
         {
-          name: "Visual Studio Code",
+          name: 'Visual Studio Code',
           link: 'https://code.visualstudio.com/',
-          image: 'assets/img/vscode.svg'
+          image: 'assets/img/vscode.svg',
         },
         {
-          name: "Github",
+          name: 'Github',
           link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-          image: 'assets/img/github.svg'
+          image: 'assets/img/github.svg',
         },
-      ]
+      ],
     },
     {
       id: 2,
-      company: "Cloudrevel Innovation",
-      position: "Software Engineer",
-      time_period: "March 2023 - Apr 2025",
-      place: "Chennai Tamilnadu India",
-      overview: 'A leading provider of tech solutions focusing on innovative software development.',
+      company: 'Cloudrevel Innovation',
+      position: 'Software Engineer',
+      time_period: 'March 2023 - Apr 2025',
+      place: 'Chennai Tamilnadu India',
+      overview:
+        'A leading provider of tech solutions focusing on innovative software development.',
       my_role: `At Cloudrevel Innovations, I am actively involved in designing and implementing database structures to ensure efficient data management and system scalability.
        My primary focus is on backend development, where I build and maintain core application logic using Laravel and MySQL while implementing secure and scalable APIs for seamless data flow.
         I work closely with the frontend team to ensure smooth API integrations and improve application responsiveness.
          Additionally, I specialize in SSO authentication implementation, enhancing security and user authentication processes.
          Performance optimization is a key part of my role, where I continuously refine database queries, caching mechanisms, and server-side processes to improve overall application efficiency.`,
-      impact: '‍My experience at Cloudrevel Innovations has strengthened my ability to architect, optimize, and implement backend solutions for complex enterprise applications. Being deeply involved in database design, API development, and performance tuning has allowed me to build robust and scalable systems that ensure both efficiency and long-term maintainability. Collaborating closely with the frontend team has refined my problem-solving skills and reinforced my passion for developing seamless, high-performing applications.',
+      impact:
+        '‍My experience at Cloudrevel Innovations has strengthened my ability to architect, optimize, and implement backend solutions for complex enterprise applications. Being deeply involved in database design, API development, and performance tuning has allowed me to build robust and scalable systems that ensure both efficiency and long-term maintainability. Collaborating closely with the frontend team has refined my problem-solving skills and reinforced my passion for developing seamless, high-performing applications.',
       projects: [
         {
-          name: "MyHinez",
+          name: 'MyHinez',
           link: '#',
-          image: "assets/img/hinez.webp",
+          image: 'assets/img/hinez.webp',
           gallery: [
-            { image: "assets/img/hinez.webp", name: "Dashboard" },
-          ]
+            { image: 'assets/img/hinez.webp', name: 'HRMS' },
+            { image: 'assets/img/projects/hrms-login.webp', name: 'HRMS' },
+            { image: 'assets/img/projects/hrms-dashboard.webp', name: 'HRMS' },
+            { image: 'assets/img/hrms-dash.webp', name: 'HRMS' },
+            { image: 'assets/img/projects/hrms-leaves.webp', name: 'HRMS' },
+            { image: 'assets/img/projects/hrms-superadmin.webp', name: 'HRMS' },
+            { image: 'assets/img/projects/hrms-hierarchy.webp', name: 'HRMS' },
+          ],
         },
         {
-          name: "Swiftrevel",
+          name: 'Swiftrevel',
           link: '#',
-          image: "assets/img/swiftrevel.webp",
-          gallery: [
-            { image: "assets/img/swiftrevel.webp", name: "Dashboard" },
-          ]
+          image: 'assets/img/swiftrevel.webp',
+          gallery: [{ image: 'assets/img/swiftrevel.webp', name: 'Dashboard' }],
         },
         {
-          name: "Rugr",
+          name: 'Rugr',
           link: '#',
-          image: "assets/img/rugr.webp",
+          image: 'assets/img/rugr.webp',
           gallery: [
-            { image: "assets/img/rugr.webp", name: "Dashboard" },
-          ]
+            { image: 'assets/img/rugr.webp', name: 'Dashboard' },
+            { image: 'assets/img/rugr-dash.webp', name: 'Dashboard' },
+          ],
         },
       ],
       tech: [
         {
-          name: "laravel",
+          name: 'laravel',
           link: 'https://laravel.com/',
-          image: 'assets/img/laravel.svg'
+          image: 'assets/img/laravel.svg',
         },
         {
-          name: "php",
+          name: 'php',
           link: 'https://www.php.net/',
-          image: 'assets/img/php.svg'
+          image: 'assets/img/php.svg',
         },
         {
-          name: "Mysql",
+          name: 'Mysql',
           link: 'https://www.mysql.com/',
-          image: 'assets/img/mysql.svg'
+          image: 'assets/img/mysql.svg',
         },
         {
-          name: "tailwind",
+          name: 'tailwind',
           link: 'https://tailwindcss.com/',
-          image: 'assets/img/tailwindcss.svg'
+          image: 'assets/img/tailwindcss.svg',
         },
         {
-          name: "JavaScript",
+          name: 'JavaScript',
           link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-          image: "assets/img/js.svg",
+          image: 'assets/img/js.svg',
         },
         {
-          name: "Laravel-Spade",
+          name: 'Laravel-Spade',
           link: 'https://splade.dev/',
-          image: 'assets/img/splade.svg'
+          image: 'assets/img/splade.svg',
         },
         {
-          name: "Spatie-Permission",
+          name: 'Spatie-Permission',
           link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-          image: "assets/img/spatie.svg",
+          image: 'assets/img/spatie.svg',
         },
         {
-          name: "Vite",
+          name: 'Vite',
           link: 'https://vitejs.dev/',
-          image: 'assets/img/vitejs.svg'
+          image: 'assets/img/vitejs.svg',
         },
         {
-          name: "Bitbucket",
+          name: 'Bitbucket',
           link: 'https://bitbucket.org/',
-          image: 'assets/img/bitbucket.svg'
+          image: 'assets/img/bitbucket.svg',
         },
         {
-          name: "Jira",
+          name: 'Jira',
           link: 'https://www.atlassian.com/software/jira',
-          image: 'assets/img/jira.svg'
+          image: 'assets/img/jira.svg',
         },
         {
-          name: "ApiDog",
+          name: 'ApiDog',
           link: 'https://apidog.com/',
-          image: 'assets/img/apidog-icon.svg'
+          image: 'assets/img/apidog-icon.svg',
         },
         {
-          name: "Linux",
+          name: 'Linux',
           link: 'https://www.kernel.org/',
-          image: 'assets/img/linux.svg'
+          image: 'assets/img/linux.svg',
         },
         {
-          name: "Laravel Reverb",
+          name: 'Laravel Reverb',
           link: 'https://reverb.laravel.com/',
-          image: 'assets/img/reverb.svg'
+          image: 'assets/img/reverb.svg',
         },
         {
-          name: "Laravel Pulse",
+          name: 'Laravel Pulse',
           link: 'https://pulse.laravel.com/',
-          image: 'assets/img/pulse.svg'
+          image: 'assets/img/pulse.svg',
         },
-      ]
+      ],
     },
     {
       id: 3,
-      company: "AOF Engineering Systems, LLC",
-      position: "Junior developer",
-      time_period: "Sep 2022 - Feb 2023",
-      place: "Hyderabad Telangana India",
-      overview: "AOF Engineering Systems LLC is a technology-driven company specializing in software solutions for the metal and oil industries, focusing on enterprise applications, system reliability, and data management.",
-      my_role:"As a Jr. Software Developer, I was introduced to Laravel, MySQL, and modern backend development. I worked on large-scale projects, handling database migrations, resolving production issues, and optimizing system performance. I also contributed to Farmers Copper, ensuring efficient operations and software maintenance.",
-      impact:"My experience at AOF Engineering Systems provided a strong foundation in backend development and database management. I played a key role in improving system stability, optimizing performance, and ensuring smooth database transitions, helping the company maintain high-quality software solutions.",
+      company: 'AOF Engineering Systems, LLC',
+      position: 'Junior developer',
+      time_period: 'Sep 2022 - Feb 2023',
+      place: 'Hyderabad Telangana India',
+      overview:
+        'AOF Engineering Systems LLC is a technology-driven company specializing in software solutions for the metal and oil industries, focusing on enterprise applications, system reliability, and data management.',
+      my_role:
+        'As a Jr. Software Developer, I was introduced to Laravel, MySQL, and modern backend development. I worked on large-scale projects, handling database migrations, resolving production issues, and optimizing system performance. I also contributed to Farmers Copper, ensuring efficient operations and software maintenance.',
+      impact:
+        'My experience at AOF Engineering Systems provided a strong foundation in backend development and database management. I played a key role in improving system stability, optimizing performance, and ensuring smooth database transitions, helping the company maintain high-quality software solutions.',
       projects: [
         {
-          name: "Farmers Copper",
+          name: 'Farmers Copper',
           link: '#',
-          image: "assets/img/farmers-copper.webp",
+          image: 'assets/img/farmers-copper.webp',
           gallery: [
-            { image: "assets/img/farmers-copper.webp", name: "Dashboard" },
-          ]
+            { image: 'assets/img/farmers-copper.webp', name: 'Dashboard' },
+          ],
         },
       ],
       tech: [
         {
-          name: "laravel",
+          name: 'laravel',
           link: 'https://laravel.com/',
-          image: 'assets/img/laravel.svg'
+          image: 'assets/img/laravel.svg',
         },
         {
-          name: "php",
+          name: 'php',
           link: 'https://www.php.net/',
-          image: 'assets/img/php.svg'
+          image: 'assets/img/php.svg',
         },
         {
-          name: "Mysql",
+          name: 'Mysql',
           link: 'https://www.mysql.com/',
-          image: 'assets/img/mysql.svg'
+          image: 'assets/img/mysql.svg',
         },
         {
-          name: "HTML5",
+          name: 'HTML5',
           link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-          image: 'assets/img/html5.svg'
+          image: 'assets/img/html5.svg',
         },
         {
-          name: "CSS3",
+          name: 'CSS3',
           link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-          image: 'assets/img/css3.svg'
+          image: 'assets/img/css3.svg',
         },
         {
-          name: "JavaScript",
+          name: 'JavaScript',
           link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-          image: 'assets/img/js.svg'
+          image: 'assets/img/js.svg',
         },
         {
-          name: "jQuery",
+          name: 'jQuery',
           link: 'https://jquery.com/',
-          image: 'assets/img/jquery.svg'
+          image: 'assets/img/jquery.svg',
         },
         {
-          name: "Visual Studio Code",
+          name: 'Visual Studio Code',
           link: 'https://code.visualstudio.com/',
-          image: 'assets/img/vscode.svg'
+          image: 'assets/img/vscode.svg',
         },
         {
-          name: "Github",
+          name: 'Github',
           link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-          image: 'assets/img/github.svg'
+          image: 'assets/img/github.svg',
         },
-      ]
-    }
-  ]
+      ],
+    },
+  ];
 
   education: Array<any> = [
     {
-      studied_at: "Manipal University Jaipur",
-      qualified: "Bachelor of Computer Applications",
-      time_period: "2024 - Present",
-      place: "Online",
+      studied_at: 'Manipal University Jaipur',
+      qualified: 'Bachelor of Computer Applications',
+      time_period: '2024 - Present',
+      place: 'Online',
     },
     {
-      studied_at: "NTTF Bangalore",
-      qualified: "Computer Engineering &IT Infrastucture",
-      time_period: "2019 - 2022",
-      place: "Bangalore Karnataka India",
+      studied_at: 'NTTF Bangalore',
+      qualified: 'Computer Engineering &IT Infrastucture',
+      time_period: '2019 - 2022',
+      place: 'Bangalore Karnataka India',
     },
     {
-      studied_at: "GVHSS Sivapuram",
-      qualified: "Plus Two Computer Science",
-      time_period: "2017 - 2019",
-      place: "Kozhikode Kerala",
+      studied_at: 'GVHSS Sivapuram',
+      qualified: 'Plus Two Computer Science',
+      time_period: '2017 - 2019',
+      place: 'Kozhikode Kerala',
     },
     {
-      studied_at: "GHSS Balussery",
-      qualified: "SSLC",
-      time_period: "2016 - 2017",
-      place: "Kozhikode Kerala",
-    }
-  ]
+      studied_at: 'GHSS Balussery',
+      qualified: 'SSLC',
+      time_period: '2016 - 2017',
+      place: 'Kozhikode Kerala',
+    },
+  ];
 }
