@@ -1,4 +1,4 @@
 export const environment = {
-    spaceId: 'xux148ew21yp',
-    accessToken: '3sevxnGapsvCay0s7h0YzitYqyafTIHnLLPGE7iRVIM'
+  spaceId: import.meta.env['NG_APP_SPACE_ID'],
+  accessToken: import.meta.env['NG_APP_ACCESS_TOKEN']
 };
