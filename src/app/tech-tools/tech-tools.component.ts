@@ -235,6 +235,12 @@ export class TechToolsComponent {
       link: 'https://www.docker.com',
       image: 'assets/img/docker.svg'
     },
+    {
+    name: "Redis",
+    description: "Redis is an in-memory data store used as a database, cache, and message broker, designed for high performance and low latency.",
+    link: "https://redis.io",
+    image: "assets/img/redis.svg"
+  },
 
   ];
 }
