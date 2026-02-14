@@ -1,133 +1,145 @@
-<div *ngIf="loading" class="flex justify-center items-center min-h-screen">
-    <!-- From Uiverse.io by Nawsome -->
+@if (loading) {
+  <div class="flex justify-center items-center min-h-screen">
     <div class="boxes">
-        <div class="box">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="box">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="box">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="box">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
-</div>
-<main *ngIf="blogPost$ |  async as blogPost">
-    <!-- Loading Spinner -->
+  </div>
+}
 
-    <div class="container mx-auto grid grid-cols-2 gap-4 p-4 px-10 xl:px-32 pb-20 content h-full">
-        @for (blogPosts of blogPost.items; track $index) {
-        <!-- <pre>{{blogPosts | json}}</pre> -->
+@if (!loading && displayedItems.length > 0) {
+  <main class="pb-8">
+    <!-- Header -->
+    <div class="container mx-auto px-10 xl:px-32 pt-8 pb-8">
+      <div>
+        <h1 class="font-bold font-playwrite text-4xl text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-blue-600">
+          Latest Articles
+        </h1>
+        <p class="text-gray-600 dark:text-gray-400 text-lg mt-2">Articles I find useful, interesting, and worth sharing my thoughts on</p>
+      </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="container mx-auto grid grid-cols-2 lg:grid-cols-3 gap-6 p-4 px-10 xl:px-32 content">
+      @for (blog of displayedItems; track blog.sys?.createdAt) {
         <div
-            class="bg-white row-span-2 md:row-span-1 col-span-2 dark:bg-gray-800 rounded-[30px] p-3 md:p-6 flex flex-col gap-4 h-[350px]  md:h-[270px] hover:shadow-lg dark:hover:shadow-xl hover-trigger relative">
+          class="group bg-gray-100/80 dark:bg-gray-800 col-span-2 lg:col-span-1 rounded-[30px] overflow-hidden border border-gray-300/80 dark:border-gray-700/80 backdrop-blur shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+          <!-- Image Container -->
+          <div class="relative h-40 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 flex-shrink-0">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              [src]="blog.fields?.poster?.fields?.file?.url || 'assets/img/placeholder.jpg'" alt="{{ blog.fields?.headding }}">
+          </div>
 
+          <!-- Content -->
+          <div class="p-4 flex flex-col flex-1">
+            <!-- Title & Description -->
+            <div class="space-y-2 flex-1">
+              <h3 class="font-bold text-base text-gray-900 dark:text-white line-clamp-2">
+                {{ blog.fields?.headding }}
+              </h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">
+                {{ blog.fields?.quickLook }}
+              </p>
 
-            <div class="grid grid-cols-4 sm:mb-4">
-                <!-- Image -->
-                <div class="md:col-span-1 col-span-4">
-                    <img class="w-full h-[100px] md:h-full object-contain rounded-lg p-2"
-                        [src]="blogPosts.fields.poster.fields.file.url" alt="project name">
-                </div>
-
-                <div class="md:col-span-3 col-span-4">
-                    <!-- Title -->
-                    <h5 class="md:mb-2 lg:text-xl font-bold font-mono text-gray-900 dark:text-white p-2">
-                        {{ blogPosts.fields.headding }}
-                    </h5>
-
-                    <!-- Description -->
-                    <p class="font-sans text-gray-700 dark:text-gray-300 text-xs md:text-sm p-2 mb-3">
-                        {{ blogPosts.fields.quickLook }}
-                    </p>
-
-                    <div class="flex flex-wrap items-center">
-                        <ng-container *ngFor="let tag of blogPosts.fields.tags; let index = index">
-                            <span [ngStyle]="{'background-color': tag.color}"
-                                class="text-white text-xs font-medium me-2 mb-1 px-2 py-0.5 rounded-full">
-                                #{{ tag.name }}
-                            </span>
-                        </ng-container>
-                    </div>
-                </div>
-            </div>
-
-            <div class="md:flex gap-x-5 md:gap-x-8">
-                <!-- website -->
-                @if (blogPosts.fields.link != false) {
-                <a href="{{blogPosts.fields.link}}?ref=devakshay.vercel.app" target="_blank">
-                    <div
-                        class="bg-gray-300 dark:bg-gray-700 w-10 h-10 rounded-full absolute bottom-0 left-0 m-4 flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400 hover:transition duration-700 ease-in-out">
-                        <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 18.256 18.256" style="transition:.3s">
-                            <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
-                                <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581"
-                                    transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                                </path>
-                                <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287"
-                                    transform="translate(-7.756 -7)" fill="none" stroke="#0D1117" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="1.5">
-                                </path>
-                            </g>
-                            <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none"></path>
-                        </svg>
-                    </div>
-                </a>
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1 pt-1">
+                @for (tag of (blog.fields?.tags ?? []) | slice: 0:3; track tag.name) {
+                  <span [ngStyle]="{'background-color': tag.color}"
+                    class="text-white text-[10px] font-medium px-1.5 py-0.5 rounded-full opacity-90 hover:opacity-100">
+                    {{ tag.name }}
+                  </span>
                 }
-                <!-- date -->
-                <div class="absolute bottom-0 right-0 sm:flex items-center space-x-2 m-5">
-                    <!-- @for (tags of blogPosts.fields.tags; track $index) {
-                    <span
-                        class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">
-                        #{{ tags.name }}</span>
-                    } -->
-                    <!-- date -->
-                    <p class="text-gray-500 text-sm">{{ blogPosts.sys.createdAt | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
-                </div>
+                @if ((blog.fields?.tags ?? []).length > 3) {
+                  <span class="text-gray-500 dark:text-gray-400 text-[10px] px-1.5 py-0.5">
+                    +{{ (blog.fields?.tags ?? []).length - 3 }}
+                  </span>
+                }
+              </div>
             </div>
-        </div>
-        }
 
-        <!-- Powred by Contentful -->
-        <div
-            class="bg-white row-span-2 md:row-span-1 col-span-2 dark:bg-gray-800 rounded-[30px] p-3 md:p-4 flex flex-col gap-4 hover:shadow-lg dark:hover:shadow-xl hover-trigger relative">
-            <div class="gap-4 flex justify-start items-center">
-                <!-- Image -->
-                <div>
-                    <img class="w-11 h-11 object-contain rounded-lg" src="assets/img/contentful.png" alt="project name">
-                </div>
-                <div>
-                    <p class="font-sans text-gray-700 dark:text-gray-300 text-xs md:text-sm">
-                        Blogs Powered by
-                    </p>
-                </div>
-                <!-- Headding -->
-                <div>
-                    <h5 class="lg:text-xl font-bold font-mono text-gray-900 dark:text-white">
-                        <a href="https://www.contentful.com/?ref=devakshay.vercel.app" target="_blank">
-                            <span class="hover:text-cyan-500">
-                                Contentful
-                            </span>
-                        </a>
-                    </h5>
-                </div>
+            <!-- Footer: Date & Link -->
+            <div class="flex items-center justify-between pt-3 border-t border-gray-300/50 dark:border-gray-700/50 mt-3 flex-shrink-0">
+              <span class="text-[11px] text-gray-500 dark:text-gray-400">
+                {{ blog.sys?.createdAt | date: 'MMM dd' }}
+              </span>
+              @if (blog.fields?.link) {
+                <a [href]="blog.fields?.link + '?ref=devakshay.vercel.app'" target="_blank"
+                  class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 text-white hover:shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18.256 18.256" fill="white">
+                    <g transform="translate(5.363 5.325)">
+                      <path d="M14.581,7.05,7.05,14.581" transform="translate(-7.05 -7.012)" fill="none" stroke="white"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                      <path d="M10,7l5.287.037.038,5.287" transform="translate(-7.756 -7)" fill="none" stroke="white"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                    </g>
+                  </svg>
+                </a>
+              }
             </div>
+          </div>
         </div>
+      }
     </div>
 
-</main>
+    <!-- Powered by Contentful Badge -->
+    <div class="container mx-auto flex justify-center mt-12 px-10 xl:px-32 pb-8">
+      <div class="bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300/80 dark:border-gray-700/80 rounded-full px-6 py-3 backdrop-blur">
+        <a href="https://www.contentful.com/?ref=devakshay.vercel.app" target="_blank"
+          class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+          <img src="assets/img/contentful.png" alt="Contentful" class="w-5 h-5">
+          <span>Blogs powered by Contentful</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center items-center gap-4 pb-6">
+      <button (click)="prevPage()" [disabled]="!hasPrevPage()"
+        class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition">
+        ← Previous
+      </button>
+
+      <div class="space-x-2 flex items-center">
+        <span class="text-sm text-gray-600 dark:text-gray-400">
+          Page {{ currentPage }} of {{ getTotalPages() }}
+        </span>
+      </div>
+
+      <button (click)="nextPage()" [disabled]="!hasNextPage()"
+        class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition">
+        Next →
+      </button>
+    </div>
+  </main>
+}
+
+@if (!loading && displayedItems.length === 0) {
+  <div class="flex flex-col items-center justify-center min-h-screen">
+    <div class="text-6xl mb-4">📝</div>
+    <h2 class="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-2">No articles found</h2>
+    <p class="text-gray-600 dark:text-gray-400">Check back soon for new content!</p>
+  </div>
+}
+

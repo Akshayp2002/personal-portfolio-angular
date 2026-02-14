@@ -4,11 +4,14 @@
     font-family: 'Playwrite HR Lijeva', cursive;
 }
 
-.font-raleway {
-    font-family: 'Raleway', sans-serif;
-
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-/* From Uiverse.io by Nawsome */ 
+
+/* Loading Animation */
 .boxes {
   --size: 32px;
   --duration: 800ms;

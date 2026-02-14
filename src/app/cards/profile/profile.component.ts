@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import confetti from 'canvas-confetti';
 
 @Component({
-  selector: 'app-profile',
+    selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+    imports: [CommonModule],
+    templateUrl: './profile.component.html',
+    styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
   showPopup = false;
@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit {
 
     // Clear confetti after a certain duration
     setTimeout(() => confetti.reset(), duration);
-    
+
   }
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
         this.animatePopup = true;
       }, 50);  // Small delay to allow DOM to render
     }, 2500); // 3 seconds delay for popup
-  
+
   }
 
   @HostListener('window:resize')
@@ -52,7 +52,7 @@ export class ProfileComponent implements OnInit {
       windowWidth >= 640 ? 'col-span-2' :
         'col-span-1';
   }
-  
+
   getGreeting(): string {
     const currentHour = new Date().getHours();
 
@@ -66,6 +66,6 @@ export class ProfileComponent implements OnInit {
   }
 
 
-  
+
 }
 

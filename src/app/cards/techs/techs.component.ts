@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-techs',
+    selector: 'app-techs',
   standalone: true,
-  imports: [RouterLink],
-  templateUrl: './techs.component.html',
-  styleUrl: './techs.component.css'
+    imports: [RouterModule],
+    templateUrl: './techs.component.html',
+    styleUrl: './techs.component.css'
 })
 export class TechsComponent {
 

@@ -3,6 +3,21 @@
     font-family: "Pacifico";
     font-weight: 600;
 }
+
+.nav-link {
+    display: inline-flex;
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    transition: border-color 220ms ease, transform 220ms ease;
+}
+
+.nav-link--active {
+    border-color: #d1d5db;
+}
+
+.dark .nav-link--active {
+    border-color: #374151;
+}
 /* Define the keyframes for the click effect */
 @keyframes click-effect {
     0% {

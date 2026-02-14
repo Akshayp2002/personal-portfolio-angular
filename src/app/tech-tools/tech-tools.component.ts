@@ -50,12 +50,6 @@ export class TechToolsComponent {
       image: 'assets/img/bootstrap.svg'
     },
     {
-      name: "Flowbite",
-      description: 'Flowbite is a popular UI component library designed for Tailwind CSS, providing a set of accessible and customizable components for building modern web applications.',
-      link: 'https://flowbite.com/',
-      image: 'assets/img/flowbite.svg'
-    },
-    {
       name: "HTML5",
       description: 'HTML5 is the latest version of HyperText Markup Language, the standard for creating web pages and applications.',
       link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
@@ -122,12 +116,6 @@ export class TechToolsComponent {
       image: 'assets/img/postman.svg'
     },
     {
-      name: "ApiDog",
-      description: 'ApiDog offers tools and services for testing and monitoring APIs to ensure their functionality and performance.',
-      link: 'https://apidog.com/',
-      image: 'assets/img/apidog-icon.svg'
-    },
-    {
       name: "AWS",
       description: 'Amazon Web Services (AWS) offers a comprehensive suite of cloud services for computing, storage, and networking.',
       link: 'https://aws.amazon.com/',
@@ -157,18 +145,6 @@ export class TechToolsComponent {
       link: 'https://chatgpt.com/',
       image: 'assets/img/openai.svg'
     },
-    {
-      name: "Atlassian",
-      description: 'Atlassian provides software products for project management, software development, and team collaboration.',
-      link: 'https://www.atlassian.com/',
-      image: 'assets/img/atlassian.svg'
-    },
-    {
-      name: "Spatie",
-      description: 'Spatie is a web development company that provides a wide range of open-source packages for Laravel and other PHP projects.',
-      link: 'https://spatie.be/',
-      image: 'assets/img/spatie.svg'
-    }, 
     {
       name: "Vercel",
       description: 'Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web',
@@ -236,11 +212,17 @@ export class TechToolsComponent {
       image: 'assets/img/docker.svg'
     },
     {
-    name: "Redis",
-    description: "Redis is an in-memory data store used as a database, cache, and message broker, designed for high performance and low latency.",
-    link: "https://redis.io",
-    image: "assets/img/redis.svg"
-  },
+      name: "Redis",
+      description: "Redis is an in-memory data store used as a database, cache, and message broker, designed for high performance and low latency.",
+      link: "https://redis.io",
+      image: "assets/img/redis.svg"
+    },
+    {
+      name: "Ollama",
+      description: "Ollama is a platform for running and managing large language models locally.",
+      link: "https://ollama.com",
+      image: "assets/img/ollama.svg"
+    },
 
   ];
 }

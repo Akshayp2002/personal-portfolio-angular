@@ -13,11 +13,11 @@ import { ContactMeComponent } from '../cards/contact-me/contact-me.component';
 import { DarkmodeComponent } from '../cards/darkmode/darkmode.component';
 
 @Component({
-  selector: 'app-home',
+    selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatSlideToggleModule, ProfileComponent, MapsComponent, TechsComponent, DarkmodeComponent, SocialComponent, ContactMeComponent, HowItStartedComponent, GithubComponent, Project1Component, Project2Component],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    imports: [CommonModule, MatSlideToggleModule, ProfileComponent, MapsComponent, TechsComponent, DarkmodeComponent, SocialComponent, ContactMeComponent, HowItStartedComponent, GithubComponent, Project1Component, Project2Component],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
   profile: string | undefined;

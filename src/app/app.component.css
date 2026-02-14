@@ -10,3 +10,9 @@
     /* Example dark mode gradient */
     background-size: 45px 45px;
 }
+
+.route-shell {
+    position: relative;
+    min-height: 1px;
+    overflow: hidden;
+}

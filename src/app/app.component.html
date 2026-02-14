@@ -3,7 +3,9 @@
     <!-- Header -->
     <app-header />
     <!-- Condent -->
-    <router-outlet></router-outlet>
+    <div class="route-shell" [@routeFade]="getRouteAnimationData(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
     <!-- Footer -->
     <app-footer />
   </div>

@@ -1,7 +1,7 @@
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
-import { createClient,Entry } from 'contentful'
-import { from } from 'rxjs';
+import { createClient, EntryCollection } from 'contentful';
+import { from, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +15,12 @@ export class ContentfulService {
     accessToken: environment.accessToken
   })
 
-  getAllEntires(){
-    const promise = this.client.getEntries()
+  getAllEntires(limit: number = 6, skip: number = 0): Observable<EntryCollection<any>> {
+    const promise = this.client.getEntries({
+      limit: limit,
+      skip: skip,
+      order: ['-sys.createdAt']
+    });
     return from(promise);
-      // .then(entries => console.log(entries));
   }
 }

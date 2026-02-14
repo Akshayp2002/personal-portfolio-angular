@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-maps',
+    selector: 'app-maps',
   standalone: true,
-  imports: [],
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css']
+    imports: [],
+    templateUrl: './maps.component.html',
+    styleUrls: ['./maps.component.css']
 })
 export class MapsComponent implements OnInit {
 

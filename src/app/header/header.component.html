@@ -24,33 +24,32 @@
             [ngClass]="{'hidden': !isMenuOpen}">
             <ul
                 class="flex flex-col md:p-1 mt-2 rounded-[20px] md:rounded-[30px] md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 border-[1px] border-gray-300 dark:border-gray-700 text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-blue-600 font-playwrite">
-                <a routerLink="/home" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                <a class="nav-link" routerLink="/home" routerLinkActive="nav-link--active"
+                    [routerLinkActiveOptions]="{ exact: true }"
                     (click)="closeMenu()">
                     <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
                         <span> Home </span>
                     </li>
                 </a>
-                <a routerLink="/about"
-                    routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700">
+                <a class="nav-link" routerLink="/about" routerLinkActive="nav-link--active">
                     <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation"
                         (click)="closeMenu()">
                         <span> About </span>
                     </li>
                 </a>
-                <a routerLink="/tools" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                <a class="nav-link" routerLink="/tools" routerLinkActive="nav-link--active"
                     (click)="closeMenu()">
                     <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
                         <span> Tools </span>
                     </li>
                 </a>
-                <a routerLink="/projects"
-                    routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                <a class="nav-link" routerLink="/projects" routerLinkActive="nav-link--active"
                     (click)="closeMenu()">
                     <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
                         <span> Projects </span>
                     </li>
                 </a>
-                <a routerLink="/blogs" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                <a class="nav-link" routerLink="/blogs" routerLinkActive="nav-link--active"
                     (click)="closeMenu()">
                     <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
                         <span> Blogs </span>

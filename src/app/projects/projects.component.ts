@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-projects',
+    selector: 'app-projects',
   standalone: true,
-  imports: [],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+    imports: [],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
 
@@ -108,8 +108,8 @@ export class ProjectsComponent {
       ]
     },
     {
-      name: "Amazon SP Manager",
-      description: "An app that uses Amazon's SP-API to automate and optimize inventory management for sellers.",
+      name: "Itrend Commerce",
+      description: "An API-driven platform integrating Amazon Ads, SP-API, and warehouse APIs for real-time inventory synchronization, pricing automation, and efficient large-scale data processing.",
       image: "assets/img/itrend-sp.webp",
       github: false,
       view: false,
@@ -133,6 +133,10 @@ export class ProjectsComponent {
         {
           name: "Amazon SP",
           image: "assets/img/aws.svg",
+        },
+        {
+          name: "Ollama",
+          image: "assets/img/ollama.svg",
         },
       ]
     },
@@ -402,7 +406,7 @@ export class ProjectsComponent {
         {
           name: "MongoDB",
           image: "assets/img/mongodb.svg",
-        },  
+        },
         {
           name: "HTML",
           image: "assets/img/html5.svg",

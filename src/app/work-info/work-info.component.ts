@@ -1,13 +1,13 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { GalleryComponent } from "../gallery/gallery.component";
 
 @Component({
-  selector: 'app-work-info',
+    selector: 'app-work-info',
   standalone: true,
-  imports: [],
-  templateUrl: './work-info.component.html',
-  styleUrl: './work-info.component.css'
+  imports: [MatDialogModule],
+    templateUrl: './work-info.component.html',
+    styleUrl: './work-info.component.css'
 })
 export class WorkInfoComponent {
   details: any;

@@ -1,19 +1,15 @@
-import { Component, Inject } from '@angular/core';
-import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
+import { Component } from '@angular/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { WorkInfoComponent } from '../work-info/work-info.component';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [MatDialogModule],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css',
+  styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog) { }
 
   openPopup(company: any): void {
     const dialogWidth = window.innerWidth > 768 ? '800px' : '90%';
@@ -35,16 +31,16 @@ export class AboutComponent {
   work: Array<any> = [
     {
       id: 1,
-      company: 'I Trend Solution',
+      company: 'iTrend Solution Pvt. Ltd.',
       position: 'Software Engineer',
       time_period: 'May 2025 - Present',
-      place: 'Chennai Tamilnadu India',
+      place: 'Chennai, Tamil Nadu, India',
       overview:
-        'iTrend Solution is a leading e-commerce company specializing in selling a wide range of products across major international platforms such as Amazon',
+        'iTrend Solution is a forward-thinking technology company streamlining e-commerce operations through advanced automation and data-driven solutions.',
       my_role:
-        'As a Full-Stack Developer at iTrend Solution, I worked on building and maintaining an internal Amazon Seller Partner (SP) inventory management platform, integrating multiple warehouse APIs, and developing Amazon Ads management solutions. My responsibilities spanned the entire development lifecycle from database architecture and backend logic to user interface design and process automation. I also implemented AI-driven recommendations to optimize bidding and budget allocation for ad campaigns, ensuring better sales performance. Additionally, I managed server-side deployments, handled server administration, and optimized system performance.',
+        'I spearhead the development of an API-driven platform that integrates Amazon Ads, SP-API, and warehouse APIs to enable real-time inventory synchronization and pricing automation. Leveraging Supervisor-based queues and caching mechanisms, I optimize workflows to accelerate report generation and sales data processing. My role also involves designing AI-powered dashboards utilizing OpenAI and local LLMs (Ollama) to provide actionable sales insights and demand forecasting. Additionally, I manage the AWS EC2 infrastructure to ensure high availability and scalability of our services.',
       impact:
-        'This role provided invaluable hands-on experience with Amazon SP-API, Amazon Ads API, and other critical third-party APIs. I gained deep expertise in real-time inventory synchronization, automated workflow creation (using cron jobs), and scalable architecture design. Working on AI-based ad optimization and multi-warehouse integrations demonstrated my ability to deliver robust, data-driven solutions that improved efficiency and sales outcomes.',
+        'My contributions have significantly enhanced system performance and operational efficiency. By automating complex inventory and pricing tasks, I reduced manual workload and improved data accuracy. The implementation of AI-driven analytics has empowered stakeholders with predictive insights for better decision-making. Furthermore, my targeted optimizations in infrastructure management have ensured a robust, high-performance environment capable of handling large-scale data processing demands.',
       projects: [
         {
           name: 'Amazon SP Manager',
@@ -52,15 +48,14 @@ export class AboutComponent {
           image: 'assets/img/itrend-sp.webp',
           gallery: [
             { image: 'assets/img/projects/itrend-login.webp', name: 'Login' },
-            { image: 'assets/img/itrend-sp.webp', name: 'Dashboard' },
+            { image: 'assets/img/projects/i-project.png', name: 'Details' },
             {
               image: 'assets/img/projects/itrend-notifications.webp',
               name: 'Notifications',
             },
-            {
-              image: 'assets/img/projects/itrend-product.webp',
-              name: 'Products',
-            },
+            { image: 'assets/img/projects/i-project-1.png', name: 'Reports' },
+            { image: 'assets/img/projects/i-project-2.png', name: 'Inventory' },
+            { image: 'assets/img/projects/i-project-3.png', name: 'Settings' },
           ],
         },
       ],
@@ -114,19 +109,16 @@ export class AboutComponent {
     },
     {
       id: 2,
-      company: 'Cloudrevel Innovation',
+      company: 'Cloudrevel Innovations Pvt. Ltd.',
       position: 'Software Engineer',
-      time_period: 'March 2023 - Apr 2025',
-      place: 'Chennai Tamilnadu India',
+      time_period: 'Mar 2023 - Apr 2025',
+      place: 'Chennai, Tamil Nadu, India',
       overview:
-        'A leading provider of tech solutions focusing on innovative software development.',
-      my_role: `At Cloudrevel Innovations, I am actively involved in designing and implementing database structures to ensure efficient data management and system scalability.
-       My primary focus is on backend development, where I build and maintain core application logic using Laravel and MySQL while implementing secure and scalable APIs for seamless data flow.
-        I work closely with the frontend team to ensure smooth API integrations and improve application responsiveness.
-         Additionally, I specialize in SSO authentication implementation, enhancing security and user authentication processes.
-         Performance optimization is a key part of my role, where I continuously refine database queries, caching mechanisms, and server-side processes to improve overall application efficiency.`,
+        'Cloudrevel Innovations is a premier provider of enterprise-grade software solutions, specializing in scalable applications and digital transformation.',
+      my_role:
+        'I focused on developing robust HRMS and ERP applications using Laravel and MySQL, tailoring solutions for high performance and security. I architected and maintained enterprise modules featuring SSO and multi-monolithic structures to enhance system reliability. My responsibilities included delivering RESTful APIs and collaborating closely with design and frontend teams to ensure seamless integration and a consistent, intuitive user experience across multiple business applications.',
       impact:
-        '‍My experience at Cloudrevel Innovations has strengthened my ability to architect, optimize, and implement backend solutions for complex enterprise applications. Being deeply involved in database design, API development, and performance tuning has allowed me to build robust and scalable systems that ensure both efficiency and long-term maintainability. Collaborating closely with the frontend team has refined my problem-solving skills and reinforced my passion for developing seamless, high-performing applications.',
+        'I played a pivotal role in standardizing scalable architecture and improving system security through advanced authentication protocols. My work on optimizing API integrations and modularizing core components led to greater system stability and easier maintenance. These efforts directly contributed to delivering reliable, high-quality enterprise solutions that streamlined client operations and elevated user satisfaction.',
       projects: [
         {
           name: 'MyHinez',
@@ -233,16 +225,16 @@ export class AboutComponent {
     },
     {
       id: 3,
-      company: 'AOF Engineering Systems, LLC',
-      position: 'Junior developer',
-      time_period: 'Sep 2022 - Feb 2023',
-      place: 'Hyderabad Telangana India',
+      company: 'AOF Engineering Systems LLC',
+      position: 'Jr. Software Developer',
+      time_period: 'Sep 2022 - Mar 2023',
+      place: 'Hyderabad, Telangana, India',
       overview:
-        'AOF Engineering Systems LLC is a technology-driven company specializing in software solutions for the metal and oil industries, focusing on enterprise applications, system reliability, and data management.',
+        'AOF Engineering Systems LLC specializes in engineering-grade software solutions for the oil, gas, and metal industries, emphasizing reliability and compliance.',
       my_role:
-        'As a Jr. Software Developer, I was introduced to Laravel, MySQL, and modern backend development. I worked on large-scale projects, handling database migrations, resolving production issues, and optimizing system performance. I also contributed to Farmers Copper, ensuring efficient operations and software maintenance.',
+        'I developed and maintained critical reporting tools and Fixed Equipment Reliability software using Laravel and MySQL. My work focused on improving data accuracy and ensuring compliance with industry standards. I also actively managed bug tracking and resolution across multiple projects, ensuring stable and reliable application performance.',
       impact:
-        'My experience at AOF Engineering Systems provided a strong foundation in backend development and database management. I played a key role in improving system stability, optimizing performance, and ensuring smooth database transitions, helping the company maintain high-quality software solutions.',
+        'My improvements to the reporting tools directly enhanced data visibility and decision-making capabilities for the client. By consistently resolving bugs and optimizing code, I ensured high application uptime and reliability. This experience solidified my foundation in building industry-compliant software and maintaining rigorous quality standards in a fast-paced environment.',
       projects: [
         {
           name: 'Farmers Copper',

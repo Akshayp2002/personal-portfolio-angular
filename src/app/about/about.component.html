@@ -1,6 +1,6 @@
-<div class="container mx-auto grid grid-cols-2  lg:grid-cols-4 gap-4 p-4 px-10 xl:px-32 pb-20 content">
+<div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 p-4 px-10 xl:px-32 pb-20 content">
     <div
-        class="bg-white row-span-2 md:row-span-1 col-span-4 dark:bg-gray-800 rounded-[30px] p-6 sm:p-10 flex flex-col gap-4 md:h-[280px] hover:shadow-lg dark:hover:shadow-xl hover-trigger">
+        class="bg-white/80 row-span-2 md:row-span-1 col-span-4 dark:bg-gray-900/80 rounded-[30px] p-6 sm:p-10 flex flex-col gap-4 md:h-[300px] border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-xl hover-trigger">
         <div class="relative w-20 h-20 lg:w-24 lg:h-24 image-container">
             <!-- <div class="absolute -right-32 -top-6 hidden -translate-y-14 rounded-full bg-orange-500 px-3 pb-2 pt-1 font-satoshi text-sm font-semibold leading-none tracking-wide text-white xs:text-lg xl:-right-28 xl:-top-2 xl:block xl:text-lg"
                 style="filter: blur(0px); opacity: 1; transform: none;">
@@ -19,61 +19,43 @@
             <img class="hover-image w-full h-full object-cover" src="assets/img/mepopper.png" alt="hover image">
         </div>
         <div class="relative inline-block">
-            <p class="font-medium text-gray-500 dark:text-gray-300 text-md">
+            <p class="font-medium text-gray-600 dark:text-gray-300 text-md leading-relaxed">
                 {{ aboutme }}
             </p>
         </div>
     </div>
 
     <div
-        class="bg-white col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-800 rounded-[30px] p-6 flex flex-col gap-4 min-h-[560px] hover:shadow-lg dark:hover:shadow-xl hover-trigger">
-        <div class="relative inline-block">
+        class="bg-white/80 col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-900/80 rounded-[30px] p-6 flex flex-col gap-4 border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-xl hover-trigger">
+        <div class="relative inline-block space-y-4">
             <span class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block">
-                Work Experience </span>
+                Work Experience
+            </span>
             <!-- Work Experience -->
             <!-- border-gray-300 dark:border-sky-800 hover:shadow-lg dark:hover:shadow-xl -->
             @for (item of work; track $index) {
-            <div class="border rounded-xl my-6 p-3 relative border-gray-300 dark:border-sky-800">
+            <div
+                class="border rounded-2xl p-4 relative border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-900/70 shadow-sm">
                 <!-- Position -->
                 <div>
-                    <p class="text-md md:text-xl roboto-mono-500 bold text-sky-800 dark:text-white ">
+                    <p class="text-md md:text-xl roboto-mono-500 bold text-sky-800 dark:text-white">
                         {{item.position}}
                     </p>
-                    <div class="flex justify-between flex-grow">
+                    <div class="flex justify-between flex-grow items-start gap-3">
                         <!-- Company -->
                         <p class="text-md md:text-xl roboto-mono-500 text-gray-800 dark:text-white break-keep">
                             {{item.company}}
                         </p>
-                        <!-- Time period -->
-                        <p class="text-xs md:text-md font-medium text-gray-500 dark:text-gray-300">{{item.time_period}}
-                        </p>
-                    </div>
-
-                    <!-- Position -->
-                    <p class="text-xs text-gray-500 dark:text-gray-300">{{item.place}}</p>
-                    <!-- Projects -->
-                    <div class="">
-
-
-                        <span
-                            class="text-sm md:text-md font-medium text-sky-500 dark:text-gray-300 md:mb-3 break-keep">Projects
-                            : </span>
-
-                        <div class="flex flex-wrap gap-4">
-                            <!-- Projects -->
-                            @for (tech of item.projects; track $index) {
-                            <div>
-                                <img class="w-32 sm:w-36 object-contain hover:shadow-lg dark:hover:shadow-xl"
-                                    [src]="tech.image" alt="projects">
-                                <p class="font-medium text-gray-500 dark:text-gray-300 text-sm">{{tech.name}}</p>
-                            </div>
-                            }
-                        </div>
-                        <div class="mt-10">
-                            <button (click)="openPopup(item)">
+                        <!-- Time period & Button -->
+                        <div class="flex items-center gap-2 flex-shrink-0">
+                            <p class="text-xs md:text-md font-medium text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                                {{item.time_period}}
+                            </p>
+                            <button (click)="openPopup(item)"
+                                class="flex-shrink-0">
                                 <div
-                                    class="bg-gray-300 dark:bg-gray-700 w-10 h-10 rounded-full absolute right-0 bottom-0 m-4 flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400 hover:transition duration-700 ease-in-out">
-                                    <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    class="bg-gray-300 dark:bg-gray-700 w-8 h-8 rounded-full flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400 transition duration-300">
+                                    <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         viewBox="0 0 18.256 18.256" style="transition:.3s">
                                         <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
                                             <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581"
@@ -91,6 +73,29 @@
                                 </div>
                             </button>
                         </div>
+                    </div>
+
+                    <!-- Position -->
+                    <p class="text-xs text-gray-500 dark:text-gray-300">{{item.place}}</p>
+                    <!-- Projects -->
+                    <div class="">
+
+
+                        <span
+                            class="text-sm md:text-md font-medium text-sky-500 dark:text-gray-300 md:mb-3 break-keep">Projects:</span>
+
+                        <div class="flex flex-wrap gap-4 mt-3">
+                            <!-- Projects -->
+                            @for (tech of item.projects; track $index) {
+                            <div class="group">
+                                <div
+                                    class="w-32 sm:w-36 rounded-xl p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm transition-transform duration-300 group-hover:-translate-y-1">
+                                    <img class="w-full h-16 object-contain" [src]="tech.image" alt="projects">
+                                    <p class="mt-2 font-medium text-gray-600 dark:text-gray-300 text-sm">{{tech.name}}</p>
+                                </div>
+                            </div>
+                            }
+                        </div>
 
                     </div>
                 </div>
@@ -100,13 +105,14 @@
     </div>
 
     <div
-        class="bg-white col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-800 rounded-[30px] p-6 flex flex-col gap-4  hover:shadow-lg dark:hover:shadow-xl hover-trigger">
-        <div class="relative inline-block">
+        class="bg-white/80 col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-900/80 rounded-[30px] p-6 flex flex-col gap-4 border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-xl hover-trigger">
+        <div class="relative inline-block space-y-4">
             <!-- Education -->
             <span class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block">
-                Education </span>
+                Education
+            </span>
             @for (item of education; track $index) {
-            <div class="border rounded-xl my-6 p-3 border-gray-300 dark:border-sky-800">
+            <div class="border rounded-2xl p-4 border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-900/70 shadow-sm">
                 <!-- qualified -->
                 <p class="text-md md:text-xl roboto-mono-500  text-sky-800 dark:text-white mt-6">
                     {{item.qualified}}
