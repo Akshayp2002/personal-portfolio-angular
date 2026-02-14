@@ -1,15 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { WorkInfoComponent } from '../work-info/work-info.component';
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
+
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [MatDialogModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+
   constructor(private dialog: MatDialog) { }
+
+  ngOnInit(): void {
+  }
 
   openPopup(company: any): void {
     const dialogWidth = window.innerWidth > 768 ? '800px' : '90%';
@@ -319,6 +329,59 @@ export class AboutComponent {
       qualified: 'SSLC',
       time_period: '2016 - 2017',
       place: 'Kozhikode Kerala',
+    },
+  ];
+
+  reviews: Array<any> = [
+    {
+      name: 'Sarah Jenkins',
+      position: 'Product Owner',
+      company: 'TechSolutions Inc.',
+      avatar: 'assets/img/memoji-1.png',
+      rating: 5,
+      review:
+        'Akshay is a phenomenal developer. He took our complex requirements for the dashboard and turned them into a smooth, user-friendly interface. His attention to detail is unmatched!',
+      date: 'Jan 2025',
+    },
+    {
+      name: 'David Rossi',
+      position: 'Senior Engineer',
+      company: 'BuildRight Ltd.',
+      avatar: 'assets/img/head-hand.png',
+      rating: 5,
+      review:
+        'Working with Akshay was a breeze. He understands the backend complexities and integrates frontend components seamlessly. A true full-stack professional.',
+      date: 'Dec 2024',
+    },
+    {
+      name: 'Emily Chen',
+      position: 'Startup Founder',
+      company: 'InnovateX',
+      avatar: 'assets/img/Me.png',
+      rating: 4.5,
+      review:
+        'Fast, reliable, and creative. Akshay not only coded the app but gave valuable UI/UX suggestions that improved our product significantly.',
+      date: 'Nov 2024',
+    },
+    {
+      name: 'David Rossi',
+      position: 'Senior Engineer',
+      company: 'BuildRight Ltd.',
+      avatar: 'assets/img/head-hand.png',
+      rating: 5,
+      review:
+        'Working with Akshay was a breeze. He understands the backend complexities and integrates frontend components seamlessly. A true full-stack professional.',
+      date: 'Dec 2024',
+    },
+    {
+      name: 'Emily Chen',
+      position: 'Startup Founder',
+      company: 'InnovateX',
+      avatar: 'assets/img/Me.png',
+      rating: 4.5,
+      review:
+        'Fast, reliable, and creative. Akshay not only coded the app but gave valuable UI/UX suggestions that improved our product significantly.',
+      date: 'Nov 2024',
     },
   ];
 }
