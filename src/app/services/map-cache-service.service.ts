@@ -9,9 +9,13 @@ export class MapCacheService {
 
   constructor() { }
 
-  getMapDetails(): any {
+  getMapDetails(): string | null {
     const cachedData = sessionStorage.getItem(this.cacheKey);
-    return cachedData ? JSON.parse(cachedData) : null;
+    try {
+      return cachedData ? JSON.parse(cachedData) : null;
+    } catch {
+      return null;
+    }
   }
 
   setMapDetails(data: any): void {

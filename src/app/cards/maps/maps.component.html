@@ -1,5 +1,5 @@
 <div class="col-span-2 md:col-span-1 rounded-[30px] relative h-[280px] hover:shadow-lg dark:bg-gray-500">
-    <iframe [src]="mapUrl" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    <iframe *ngIf="mapUrl" [src]="mapUrl" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen style="border-radius: 20px;">
     </iframe>
     <div

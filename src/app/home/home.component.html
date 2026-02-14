@@ -1,27 +1,33 @@
-<div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 p-4 px-10 xl:px-32 pb-20 content">
-    <!-- Profile Card -->
-    <app-profile [ngClass]="profile" />
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 px-4 md:px-10 lg:px-20 xl:px-32 pb-20 content" @listAnimation>
 
-    <!-- Maps -->
-    <app-maps [ngClass]="maps" />
-    <!-- row 2 vertical -->
-    <app-techs [ngClass]="techs" />
-    <!-- Spotify -->
-    <app-darkmode [ngClass]="spotify" />
-    <!-- Linked In -->
+    <!-- Profile Card: Main feature, spans 2 cols -->
+    <app-profile class="md:col-span-2 lg:col-span-2" />
 
-    <app-social [ngClass]="spotify" />
-    <!-- row 2 vertical netflix-->
+    <!-- Maps: Square card -->
+    <app-maps class="md:col-span-1" />
 
-    <app-project-1 [ngClass]="project1" />
+    <!-- Techs: Tall vertical card -->
+    <app-techs class="md:col-span-1 row-span-2" />
 
+    <!-- Dark Mode Toggle: Square card -->
+    <app-darkmode class="md:col-span-1" />
 
-    <app-how-it-started [ngClass]="profile" />
+    <!-- Social Links: Square card -->
+    <app-social class="md:col-span-1" />
 
-    <!-- github -->
-    <app-github [ngClass]="spotify" />
-    <!-- Yellow card -->
-    <app-project-2 [ngClass]="profile" />
-    <!-- Last card -->
-    <app-contact-me [ngClass]="profile" />
+    <!-- Project 1: Tall vertical card -->
+    <app-project-1 class="md:col-span-1 row-span-2" />
+
+    <!-- How It Started: Wide card spanning 2 cols -->
+    <app-how-it-started class="md:col-span-2 lg:col-span-2" />
+
+    <!-- Github Stats: Square card -->
+    <app-github class="md:col-span-1" />
+
+    <!-- Project 2: Square card -->
+    <app-project-2 class="md:col-span-2 lg:col-span-2" />
+
+    <!-- Contact Me: Square card -->
+    <app-contact-me class="md:col-span-2 lg:col-span-2" />
+
 </div>
