@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { TechToolsComponent } from './tech-tools/tech-tools.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { ReviewFormComponent } from './review-form/review-form.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,10 @@ export const routes: Routes = [
     {
         path: 'home',
         component: HomeComponent
+    },
+    {
+        path: 'share-review',
+        component: ReviewFormComponent
     },
     {
         path: 'about',

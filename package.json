@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "node ./scripts/set-env.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,6 +21,8 @@
     "@angular/platform-browser": "^21.1.4",
     "@angular/platform-browser-dynamic": "^21.1.4",
     "@angular/router": "^21.1.4",
+    "@aws-sdk/client-s3": "^3.990.0",
+    "@supabase/supabase-js": "^2.95.3",
     "@vercel/analytics": "^1.3.1",
     "@vercel/speed-insights": "^1.0.12",
     "canvas-confetti": "^1.9.3",
@@ -43,6 +46,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "tailwindcss": "^3.4.7",
+    "ts-node": "^10.9.2",
     "typescript": "~5.9.3"
   }
 }
