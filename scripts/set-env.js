@@ -41,13 +41,13 @@ fs.writeFile(targetPath, envConfigFile, function (err) {
     if (err) {
         console.log(err);
     }
-    console.log(\`Output generated at \${targetPath}\`);
+    console.log(`Output generated at ${targetPath}`);
 });
 
 fs.writeFile(targetPathDev, envConfigFile, function (err) {
     if (err) {
         console.log(err);
     }
-    console.log(\`Output generated at \${targetPathDev}\`);
+    console.log(`Output generated at ${targetPathDev}`);
 });
 
