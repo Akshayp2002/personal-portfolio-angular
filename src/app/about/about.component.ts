@@ -153,8 +153,8 @@ export class AboutComponent implements OnInit {
             { image: 'assets/img/projects/hrms-dashboard.webp', name: 'HRMS' },
             { image: 'assets/img/hrms-dash.webp', name: 'HRMS' },
             { image: 'assets/img/projects/hrms-leaves.webp', name: 'HRMS' },
-            { image: 'assets/img/projects/hrms-superadmin.webp', name: 'HRMS' },
-            { image: 'assets/img/projects/hrms-hierarchy.webp', name: 'HRMS' },
+            // { image: 'assets/img/projects/hrms-superadmin.webp', name: 'HRMS' },
+            // { image: 'assets/img/projects/hrms-hierarchy.webp', name: 'HRMS' },
           ],
         },
         {
