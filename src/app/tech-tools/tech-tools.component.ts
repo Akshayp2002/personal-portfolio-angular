@@ -73,12 +73,12 @@ export class TechToolsComponent {
       link: 'https://jquery.com/',
       image: 'assets/img/jquery.svg'
     },
-    {
-      name: "Vite",
-      description: 'Vite is a modern build tool that provides a fast development environment and optimized builds.',
-      link: 'https://vitejs.dev/',
-      image: 'assets/img/vitejs.svg'
-    },
+    // {
+    //   name: "Vite",
+    //   description: 'Vite is a modern build tool that provides a fast development environment and optimized builds.',
+    //   link: 'https://vitejs.dev/',
+    //   image: 'assets/img/vitejs.svg'
+    // },
     {
       name: "MySQL",
       description: 'MySQL is an open-source relational database management system based on SQL (Structured Query Language).',
@@ -157,18 +157,18 @@ export class TechToolsComponent {
       link: 'https://www.typescriptlang.org/',
       image: 'assets/img/typescript.svg'
     },
-    {
-      name: "Swiper",
-      description: 'Swiper is the most modern free and open source mobile touch slider with hardware accelerated transitions and amazing native behavior.',
-      link: 'https://swiperjs.com/',
-      image: 'assets/img/swipper.svg'
-    },
-    {
-      name: "API-Ninjas",
-      description: 'API Ninjas is a data company that enables you to build real applications using real data. API Ninjas maintains 78 APIs',
-      link: 'https://api-ninjas.com/',
-      image: 'assets/img/ninja.png'
-    },
+    // {
+    //   name: "Swiper",
+    //   description: 'Swiper is the most modern free and open source mobile touch slider with hardware accelerated transitions and amazing native behavior.',
+    //   link: 'https://swiperjs.com/',
+    //   image: 'assets/img/swipper.svg'
+    //}
+    // {
+    //   name: "API-Ninjas",
+    //   description: 'API Ninjas is a data company that enables you to build real applications using real data. API Ninjas maintains 78 APIs',
+    //   link: 'https://api-ninjas.com/',
+    //   image: 'assets/img/ninja.png'
+    // },
     {
       name: "Laravel Reverb",
       description: 'Reverb is a first-party WebSocket server for Laravel applications, bringing real-time communication between client and server directly to your fingertips.',
@@ -182,6 +182,12 @@ export class TechToolsComponent {
       image: 'assets/img/pulse.svg'
     },
     {
+      name: "Livewire",
+      description: 'Livewire is a full-stack framework for Laravel that allows you to build dynamic, reactive interfaces using PHP, without leaving the comfort of Laravel.',
+      link: 'https://livewire.laravel.com/',
+      image: 'assets/img/Livewire.svg'
+    },
+    {
       name: "Contentful",
       description: 'Contentful is a cloud-based content management system (CMS) that allows users to create, store, and manage content for websites, mobile apps, and other platforms. ',
       link: 'https://www.contentful.com/',
@@ -193,12 +199,12 @@ export class TechToolsComponent {
       link: 'https://daily.dev',
       image: 'assets/img/dailydev.svg'
     },
-    {
-      name: "Microsoft Loop",
-      description: 'Loop is a note-taking platform that helps users organize, collaborate, and manage their notes efficiently.',
-      link: 'https://loop.cloud.microsoft/learn',
-      image: 'assets/img/loop.svg'
-    },
+    // {
+    //   name: "Microsoft Loop",
+    //   description: 'Loop is a note-taking platform that helps users organize, collaborate, and manage their notes efficiently.',
+    //   link: 'https://loop.cloud.microsoft/learn',
+    //   image: 'assets/img/loop.svg'
+    // },
     {
       name: "Affine",
       description: 'AFFiNE is an open-source, all-in-one workspace that combines the features of note-taking, project management, and collaboration tools like Notion',
@@ -223,6 +229,11 @@ export class TechToolsComponent {
       link: "https://ollama.com",
       image: "assets/img/ollama.svg"
     },
-
+    {
+      name: "Supabase",
+      description: 'Supabase is an open source Firebase alternative that provides a backend-as-a-service with a real-time database, authentication, and edge functions.',
+      link: 'https://supabase.com/',
+      image: 'assets/img/supabase.svg'
+    },
   ];
 }
