@@ -48,3 +48,13 @@
 .hover-trigger:hover .hover-image {
     opacity: 1;
 }
+
+swiper-container {
+    overflow: visible;
+    padding: 8px 8px 14px;
+}
+
+swiper-container::part(container),
+swiper-container::part(wrapper) {
+    overflow: visible;
+}
