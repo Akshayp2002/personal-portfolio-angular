@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-projects',
+  selector: 'app-projects',
   standalone: true,
-    imports: [],
-    templateUrl: './projects.component.html',
-    styleUrl: './projects.component.css'
+  imports: [],
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
 
@@ -40,6 +40,35 @@ export class ProjectsComponent {
         {
           name: "Figma",
           image: "assets/img/figma.svg",
+        },
+      ]
+    },
+    {
+      name: "Retro Radio",
+      description: "Retro Radio is a music streaming platform that offers a nostalgic experience with a curated selection of classic and vintage music, allowing users to enjoy timeless tunes from various genres.",
+      image: "assets/img/retro-radio.png",
+      github: "https://github.com/Akshayp2002/radio",
+      view: "https://radio-devakshay.vercel.app",
+      status: true,
+      date: "Feb - 2026",
+      demo: false,
+      personal: true,
+      tech: [
+        {
+          name: "Nextjs",
+          image: "assets/img/nextjs2.svg",
+        },
+        {
+          name: "Tailwind",
+          image: "assets/img/tailwindcss.svg",
+        },
+        {
+          name: "vercel",
+          image: "assets/img/vercel-icon-dark.svg",
+        },
+        {
+          name: "Supabase",
+          image: "assets/img/supabase.svg",
         },
       ]
     },
@@ -329,7 +358,7 @@ export class ProjectsComponent {
       name: "Farmers Copper",
       description: "Farmer’s Copper Ltd. extends its services throughout many industries. Provide the raw copper alloy materials in various standard shapes as well as custom cut copper alloys.",
       image: "assets/img/farmers-copper.webp",
-      github:false,
+      github: false,
       view: false,
       status: false,
       date: "November - 2023",
