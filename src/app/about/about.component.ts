@@ -66,7 +66,7 @@ export class AboutComponent implements OnInit {
         'My contributions have significantly enhanced system performance and operational efficiency. By automating complex inventory and pricing tasks, I reduced manual workload and improved data accuracy. The implementation of AI-driven analytics has empowered stakeholders with predictive insights for better decision-making. Furthermore, my targeted optimizations in infrastructure management have ensured a robust, high-performance environment capable of handling large-scale data processing demands.',
       projects: [
         {
-          name: 'Amazon SP Manager',
+          name: 'iTrend Commerce',
           link: '#',
           image: 'assets/img/itrend-sp.webp',
           gallery: [
@@ -127,6 +127,31 @@ export class AboutComponent implements OnInit {
           name: 'Github',
           link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
           image: 'assets/img/github.svg',
+        },
+        {
+          name: "AWS",
+          link: 'https://aws.amazon.com/',
+          image: 'assets/img/aws.svg'
+        },
+        {
+          name: "Ubuntu",
+          link: 'https://www.kernel.org/',
+          image: 'assets/img/ubuntu.svg'
+        },
+        {
+          name: "Redis",
+          link: "https://redis.io",
+          image: "assets/img/redis.svg"
+        },
+        {
+          name: "Ollama",
+          link: "https://ollama.com",
+          image: "assets/img/ollama.svg"
+        },
+        {
+          name: "Livewire",
+          link: 'https://livewire.laravel.com/',
+          image: 'assets/img/Livewire.svg'
         },
       ],
     },
@@ -346,4 +371,9 @@ export class AboutComponent implements OnInit {
   ];
 
   reviews: Array<any> = [];
+  expandedReviewIndex: number | null = null;
+
+  toggleReview(index: number): void {
+    this.expandedReviewIndex = this.expandedReviewIndex === index ? null : index;
+  }
 }

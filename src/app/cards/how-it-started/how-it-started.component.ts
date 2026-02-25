@@ -10,14 +10,8 @@ import { RouterModule } from '@angular/router';
 })
 export class HowItStartedComponent {
 
-  headding: string = `How it started vs.
-            how
-            it's
-            going`
-  how: string = `A short personal history as it relates to design and
-            development,and
-            how I've found value in the
-            cross-section between
-            both disciplines.`
+  headding: string = `Code to
+            Dreams`
+  how: string = `My journey from curious beginner to passionate developer—discovering that great code is part art, part science, and all about solving real problems.`
   date: string = "June 1 2024"
 }

@@ -1,18 +1,7 @@
 <div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 p-4 px-10 xl:px-32 pb-20 content">
     <div
-        class="bg-white/80 row-span-2 md:row-span-1 col-span-4 dark:bg-gray-900/80 rounded-[30px] p-6 sm:p-10 flex flex-col gap-4 md:h-[300px] border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-xl hover-trigger">
+        class="bg-white/80 row-span-2 md:row-span-1 col-span-4 dark:bg-gray-900/80 rounded-[30px] p-6 sm:p-10 flex flex-col gap-4 border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-md hover-trigger">
         <div class="relative w-20 h-20 lg:w-24 lg:h-24 image-container">
-            <!-- <div class="absolute -right-32 -top-6 hidden -translate-y-14 rounded-full bg-orange-500 px-3 pb-2 pt-1 font-satoshi text-sm font-semibold leading-none tracking-wide text-white xs:text-lg xl:-right-28 xl:-top-2 xl:block xl:text-lg"
-                style="filter: blur(0px); opacity: 1; transform: none;">
-                <span class="inline-block text-base">Hi there!</span>
-                <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="absolute -bottom-[11px] left-5 w-5 rotate-2 text-orange-500">
-                    <path
-                        d="M20.473.465c-2.222 5.25-5.185 9.662-10.413 12.585C9.04 6.101 6.946 4.072-.096 1.182L3.5 1l14-.5 2.973-.035z"
-                        fill="currentColor">
-                    </path>
-                </svg>
-            </div> -->
             <!-- Default Image -->
             <img class="default-image w-full h-full object-cover" src="assets/img/Me.png" alt="default image">
             <!-- Hover Image -->
@@ -24,58 +13,52 @@
             </p>
         </div>
     </div>
-
-<!-- Reviews / Testimonials Section (Seamless integration) -->
+    <!-- Reviews / Testimonials Section (Seamless integration) -->
     <div class="col-span-4">
         <!-- Swiper Container for Marquee Effect -->
-        <swiper-container
-            slides-per-view="auto"
-            space-between="20"
-            loop="true"
-            speed="4000"
-            autoplay-delay="0"
-            autoplay-disable-on-interaction="false"
-            pause-on-mouse-enter="true"
-            free-mode="true"
-            direction="horizontal"
+        <swiper-container slides-per-view="auto" space-between="20" loop="true" speed="4000" autoplay-delay="0"
+            autoplay-disable-on-interaction="false" pause-on-mouse-enter="true" free-mode="true" direction="horizontal"
             style="--swiper-wrapper-transition-timing-function: linear; overflow: visible;"
-            class="w-full mask-gradient overflow-visible"
-            >
+            class="w-full mask-gradient overflow-visible">
             @for (review of reviews; track $index) {
-                <swiper-slide style="width: auto; overflow: visible;">
-                    <div class="bg-white/50 dark:bg-gray-800/50 backdrop-blur-md rounded-2xl p-4 pr-8 border border-gray-100 dark:border-gray-700/50 flex items-center gap-4 select-none w-max max-w-[350px] md:max-w-[450px] hover:shadow-xl hover-trigger relative transition-shadow duration-300 hover:z-10">
+            <swiper-slide style="width: auto; overflow: visible;">
+                <div (click)="toggleReview($index)"
+                    class="bg-white/80 dark:bg-gray-900/80 backdrop-blur rounded-[30px] p-6 pr-8 border border-gray-200/80 dark:border-gray-700/80 flex items-start gap-4 select-none w-max max-w-[350px] md:max-w-[450px] min-h-[140px] hover:shadow-md hover-trigger relative transition-all duration-300 hover:z-10 cursor-pointer"
+                    [class.z-10]="expandedReviewIndex === $index">
 
-                        <!-- Avatar -->
-                        <div class="relative flex-shrink-0">
-                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-600 shadow-sm">
-                                <img [src]="review.avatar" alt="{{ review.name }}" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-
-                        <!-- Content -->
-                        <div class="flex flex-col min-w-0">
-                            <div class="flex flex-col mb-1">
-                                <h4 class="font-bold text-gray-900 dark:text-white text-base">{{ review.name }}</h4>
-                                <span class="text-xs text-sky-600 dark:text-sky-400 font-medium opacity-90">{{ review.company }}</span>
-                            </div>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 italic leading-snug w-full">
-                                "{{ review.review }}"
-                            </p>
+                    <!-- Avatar -->
+                    <div class="relative flex-shrink-0">
+                        <div
+                            class="w-10 h-10 md:w-12 md:h-12 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-600 shadow-sm">
+                            <img [src]="review.avatar" alt="{{ review.name }}" class="w-full h-full object-cover">
                         </div>
                     </div>
-                </swiper-slide>
+
+                    <!-- Content -->
+                    <div class="flex flex-col min-w-0 flex-1">
+                        <div class="flex flex-col mb-2">
+                            <h4 class="font-bold text-gray-600 dark:text-gray-300 text-muted ">{{ review.name }}</h4>
+                            <span class="text-xs text-sky-500 dark:text-sky-300 font-medium">{{ review.company }}</span>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 italic leading-snug w-full transition-all"
+                            [class.line-clamp-3]="expandedReviewIndex !== $index">
+                            "{{ review.review }}"
+                        </p>
+                    </div>
+                </div>
+            </swiper-slide>
             }
         </swiper-container>
     </div>
 
     <div
-        class="bg-white/80 col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-900/80 rounded-[30px] p-6 flex flex-col gap-4 border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-xl hover-trigger">
+        class="bg-white/80 col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-900/80 rounded-[30px] p-6 flex flex-col gap-4 border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-md hover-trigger">
         <div class="relative inline-block space-y-4">
             <span class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block">
                 Work Experience
             </span>
             <!-- Work Experience -->
-            <!-- border-gray-300 dark:border-sky-800 hover:shadow-lg dark:hover:shadow-xl -->
+            <!-- border-gray-300 dark:border-sky-800 hover:shadow-lg dark:hover:shadow-md -->
             @for (item of work; track $index) {
             <div
                 class="border rounded-2xl p-4 relative border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-900/70 shadow-sm">
@@ -91,11 +74,11 @@
                         </p>
                         <!-- Time period & Button -->
                         <div class="flex items-center gap-2 flex-shrink-0">
-                            <p class="text-xs md:text-md font-medium text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                            <p
+                                class="text-xs md:text-md font-medium text-gray-500 dark:text-gray-300 whitespace-nowrap">
                                 {{item.time_period}}
                             </p>
-                            <button (click)="openPopup(item)"
-                                class="flex-shrink-0">
+                            <button (click)="openPopup(item)" class="flex-shrink-0">
                                 <div
                                     class="bg-gray-300 dark:bg-gray-700 w-8 h-8 rounded-full flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400 transition duration-300">
                                     <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -122,24 +105,21 @@
                     <p class="text-xs text-gray-500 dark:text-gray-300">{{item.place}}</p>
                     <!-- Projects -->
                     <div class="">
-
-
-                        <span
-                            class="text-sm md:text-md font-medium text-sky-500 dark:text-gray-300 md:mb-3 break-keep">Projects:</span>
-
+                        <!-- <span
+                            class="text-sm md:text-md font-medium text-sky-500 dark:text-gray-300 md:mb-3 break-keep">Projects:</span> -->
                         <div class="flex flex-wrap gap-4 mt-3">
                             <!-- Projects -->
                             @for (tech of item.projects; track $index) {
                             <div class="group">
                                 <div
-                                    class="w-32 sm:w-36 rounded-xl p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm transition-transform duration-300 group-hover:-translate-y-1">
+                                    class="w-32 sm:w-36 rounded-xl p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm transition-transform duration-300">
                                     <img class="w-full h-16 object-contain" [src]="tech.image" alt="projects">
-                                    <p class="mt-2 font-medium text-gray-600 dark:text-gray-300 text-sm">{{tech.name}}</p>
+                                    <p class="mt-0 font-medium text-gray-600 dark:text-gray-300 text-sm">{{tech.name}}
+                                    </p>
                                 </div>
                             </div>
                             }
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -148,14 +128,15 @@
     </div>
 
     <div
-        class="bg-white/80 col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-900/80 rounded-[30px] p-6 flex flex-col gap-4 border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-xl hover-trigger">
+        class="bg-white/80 col-span-4 lg:col-span-2 row-span-2 dark:bg-gray-900/80 rounded-[30px] p-6 flex flex-col gap-4 border border-gray-200/80 dark:border-gray-700/80 backdrop-blur hover:shadow-md hover-trigger">
         <div class="relative inline-block space-y-4">
             <!-- Education -->
             <span class="font-bold font-playwrite text-2xl text-black dark:text-white inline-block">
                 Education
             </span>
             @for (item of education; track $index) {
-            <div class="border rounded-2xl p-4 border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-900/70 shadow-sm">
+            <div
+                class="border rounded-2xl p-4 border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-900/70 shadow-sm">
                 <!-- qualified -->
                 <p class="text-md md:text-xl roboto-mono-500  text-sky-800 dark:text-white mt-6">
                     {{item.qualified}}
@@ -174,6 +155,4 @@
             }
         </div>
     </div>
-
-
 </div>

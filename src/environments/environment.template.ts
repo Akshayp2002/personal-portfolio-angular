@@ -15,5 +15,8 @@ export const environment = {
     accessKeyId: 'YOUR_S3_ACCESS_KEY',
     secretAccessKey: 'YOUR_S3_SECRET_KEY',
     bucket: 'YOUR_S3_BUCKET'
-  }
+  },
+  contactApiUrl: '/api/send-email',
+  gmailUser: 'YOUR_GMAIL_USER',
+  gmailAppPassword: 'YOUR_GMAIL_APP_PASSWORD'
 };
