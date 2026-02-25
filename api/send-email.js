@@ -36,17 +36,17 @@ export default async function handler(req, res) {
       `,
     });
 
-    // Optional: Send confirmation email to user
-    // await transporter.sendMail({
-    //   from: process.env.GMAIL_USER,
-    //   to: email,
-    //   subject: 'Thanks for reaching out!',
-    //   html: `
-    //     <h2>Hi ${name},</h2>
-    //     <p>Thank you for your message! I've received it and will get back to you soon.</p>
-    //     <p>Best regards,<br>Akshay</p>
-    //   `,
-    // });
+    // Send confirmation email to user
+    await transporter.sendMail({
+      from: process.env.GMAIL_USER,
+      to: email,
+      subject: 'Thanks for reaching out!',
+      html: `
+        <h2>Hey ${name}! 👋</h2>
+        <p>Thanks for dropping a message! I got it and will check it out when I get a chance.</p>
+        <p>Cheers,<br>Akshay</p>
+      `,
+    });
 
     return res.status(200).json({ success: true, message: 'Email sent successfully' });
   } catch (error) {
